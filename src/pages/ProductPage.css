@@ -48,8 +48,8 @@
    -------------------------------------------------------------------------- */
 .az-pdp__breadcrumb-bar {
   width: 100%;
-  background-color: #faf8f5;
-  border-bottom: 1px solid #ebe5dc;
+  background-color: var(--color-ivory, #F8F7F0);
+  border-bottom: 1px solid var(--color-sand-beige, #E6DCC8);
   padding: 10px 0;
 }
 
@@ -238,21 +238,23 @@
 }
 
 .az-pdp__badge-pill--arrival {
-  background-color: #fbf4ea;
-  color: #72431d;
+  background-color: var(--color-ivory, #F8F7F0);
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .az-pdp__badge-pill--wishlist {
-  background-color: #fbf4ea;
-  color: #72431d;
+  background-color: var(--color-ivory, #F8F7F0);
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .az-pdp__badge-icon {
-  color: #72431d;
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .az-pdp__badge-icon--heart {
-  stroke: #c0451e;
+  stroke: var(--color-emerald-green, #0B4D3B);
 }
 
 /* Designer Header with Chevron + Share/Wishlist Icons */
@@ -313,7 +315,7 @@
 }
 
 .az-pdp__header-btn--active {
-  color: #c0451e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 /* Product Title */
@@ -342,7 +344,7 @@
 .az-pdp__price-val {
   font-size: 22px;
   font-weight: 700;
-  color: #111111;
+  color: var(--color-emerald-green, #0B4D3B);
   letter-spacing: -0.01em;
 }
 
@@ -393,7 +395,7 @@
 }
 
 .az-pdp__size-guide-link:hover {
-  color: #b8431f;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .az-pdp__size-chips-grid {
@@ -471,9 +473,9 @@
 .az-pdp__btn-add-cart {
   flex: 1.4;
   height: 48px;
-  background-color: #b8431f;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
-  border: none;
+  border: 1px solid var(--color-antique-gold, #D4AF7C);
   border-radius: 4px;
   font-family: inherit;
   font-size: 13.5px;
@@ -484,23 +486,24 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background-color 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .az-pdp__btn-add-cart:hover {
-  background-color: #a03716;
+  background-color: var(--color-royal-green, #1A6A53);
+  box-shadow: 0 4px 16px rgba(11, 77, 59, 0.25);
 }
 
 .az-pdp__btn-add-cart--added {
-  background-color: #093c2e;
+  background-color: var(--color-royal-green, #1A6A53);
 }
 
 .az-pdp__btn-speak-stylist {
   flex: 1.1;
   height: 48px;
-  background: #ffffff;
-  color: #111111;
-  border: 1.5px solid #111111;
+  background: var(--color-ivory, #F8F7F0);
+  color: var(--color-emerald-green, #0B4D3B);
+  border: 1.5px solid var(--color-emerald-green, #0B4D3B);
   border-radius: 4px;
   font-family: inherit;
   font-size: 13.5px;
@@ -514,14 +517,14 @@
 }
 
 .az-pdp__btn-speak-stylist:hover {
-  background: #faf8f5;
-  border-color: #000000;
+  background: var(--color-sand-beige, #E6DCC8);
+  border-color: var(--color-royal-green, #1A6A53);
 }
 
 /* Pincode & Delivery Options Card */
 .az-pdp__delivery-card {
-  background: #faf8f5;
-  border: 1px solid #ebe5dc;
+  background: var(--color-ivory, #F8F7F0);
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   border-radius: 8px;
   padding: 16px;
   display: flex;
@@ -584,14 +587,14 @@
 }
 
 .az-pdp__delivery-radio input[type="radio"] {
-  accent-color: #b8431f;
+  accent-color: var(--color-emerald-green, #0B4D3B);
   margin-top: 3px;
   cursor: pointer;
 }
 
 .az-pdp__delivery-radio--selected {
-  border-color: #b8431f;
-  background: #fffcf9;
+  border-color: var(--color-emerald-green, #0B4D3B);
+  background: var(--color-ivory, #F8F7F0);
 }
 
 .az-pdp__radio-body {
@@ -606,16 +609,17 @@
 }
 
 .az-pdp__highlight-date {
-  color: #b8431f;
+  color: var(--color-emerald-green, #0B4D3B);
+  font-weight: 700;
 }
 
 .az-pdp__fast-tag {
   display: inline-block;
-  background: #f3ece4;
-  color: #72431d;
+  background: var(--color-royal-green, #1A6A53);
+  color: #ffffff;
   font-size: 10.5px;
   font-weight: 700;
-  padding: 2px 6px;
+  padding: 2px 7px;
   border-radius: 3px;
   width: fit-content;
 }
@@ -663,22 +667,22 @@
 }
 
 .az-pdp__check-mark {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 700;
 }
 
 /* Offers & EMI Section */
 .az-pdp__offers-section {
   padding-top: 20px;
-  border-top: 1px solid #ebe5dc;
+  border-top: 1px solid var(--color-sand-beige, #E6DCC8);
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .az-pdp__coupon-card {
-  background: #fdfaf6;
-  border: 1px dashed #d5b687;
+  background: var(--color-ivory, #F8F7F0);
+  border: 1px dashed var(--color-antique-gold, #D4AF7C);
   border-radius: 6px;
   padding: 12px 14px;
 }
@@ -719,8 +723,8 @@
 .az-pdp__coupon-desc {
   display: block;
   font-size: 11px;
-  color: #72431d;
-  font-weight: 500;
+  color: var(--color-emerald-green, #0B4D3B);
+  font-weight: 600;
   margin-top: 4px;
 }
 
@@ -728,7 +732,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #e0d8cc;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   border-radius: 6px;
   padding: 10px 14px;
   font-size: 12.5px;
@@ -741,7 +745,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #e0d8cc;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   border-radius: 6px;
   padding: 10px 14px;
   font-size: 12.5px;
@@ -818,7 +822,7 @@
 }
 
 .az-pdp__spec-bullet {
-  color: #b8431f;
+  color: var(--color-antique-gold, #D4AF7C);
   font-size: 11px;
 }
 
@@ -859,7 +863,7 @@
    4. Complete The Look Cross-Sell Section
    -------------------------------------------------------------------------- */
 .az-pdp__complete-look {
-  background-color: #faf7f2;
+  background-color: var(--color-ivory, #F8F7F0);
   border-top: 1px solid #ebe5dc;
   border-bottom: 1px solid #ebe5dc;
   padding: 60px 0;
@@ -894,7 +898,7 @@
 .az-pdp__gold-divider {
   width: 48px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 12px auto;
 }
 
@@ -987,7 +991,7 @@
 }
 
 .az-pdp__pairing-btn:hover {
-  background-color: #b8431f;
+  background-color: var(--color-emerald-green, #0B4D3B);
 }
 
 /* --------------------------------------------------------------------------
@@ -1137,7 +1141,7 @@
 .az-pdp__mobile-price {
   font-size: 17px;
   font-weight: 700;
-  color: #111111;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .az-pdp__mobile-tax {
@@ -1162,18 +1166,23 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: all 0.2s ease;
 }
 
 .az-pdp__mobile-btn--stylist {
-  background-color: #ffffff;
-  color: #111111;
-  border: 1.5px solid #111111;
+  background-color: var(--color-ivory, #F8F7F0);
+  color: var(--color-emerald-green, #0B4D3B);
+  border: 1.5px solid var(--color-emerald-green, #0B4D3B);
 }
 
 .az-pdp__mobile-btn--cart {
-  background-color: #b8431f;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
-  border: 1.5px solid #b8431f;
+  border: 1.5px solid var(--color-antique-gold, #D4AF7C);
+}
+
+.az-pdp__mobile-btn--cart:hover {
+  background-color: var(--color-royal-green, #1A6A53);
 }
 
 /* --------------------------------------------------------------------------
@@ -1292,7 +1301,7 @@
 
 .az-pdp__size-footer {
   padding: 12px 14px;
-  background-color: #faf7f2;
+  background-color: var(--color-ivory, #F8F7F0);
   border-radius: 4px;
   font-size: 11.5px;
   color: #6a6459;

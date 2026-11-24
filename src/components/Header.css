@@ -11,16 +11,16 @@
   width: 100%;
   z-index: 1000;
   background-color: #ffffff;
-  border-bottom: 1px solid #ebe5dc;
+  border-bottom: 1px solid var(--color-sand-beige, #E6DCC8);
   transition: box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .pavun-header--scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(248, 247, 240, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  border-bottom-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(11, 77, 59, 0.06);
+  border-bottom-color: var(--color-sand-beige, #E6DCC8);
 }
 
 /* Container */
@@ -217,7 +217,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   font-size: 9px;
   font-weight: 700;
@@ -231,7 +231,7 @@
 .pavun-header__badge--cart {
   top: -5px;
   right: -7px;
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
 }
 
 /* --------------------------------------------------------------------------
@@ -239,7 +239,7 @@
    -------------------------------------------------------------------------- */
 .pavun-header__nav {
   width: 100%;
-  border-top: 1px solid #f2ede4;
+  border-top: 1px solid var(--color-sand-beige, #E6DCC8);
   background-color: #ffffff;
   position: relative;
 }
@@ -280,14 +280,14 @@
   left: 0;
   width: 100%;
   height: 1.5px;
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pavun-header__nav-link:hover {
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
 }
 
 .pavun-header__nav-link:hover::after,
@@ -296,7 +296,7 @@
 }
 
 .pavun-header__nav-item--active .pavun-header__nav-link {
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   font-weight: 600;
 }
 
@@ -346,7 +346,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   margin: 0 0 14px 0;
   padding-bottom: 6px;
   border-bottom: 1px solid #ebe5dc;
@@ -371,7 +371,7 @@
 }
 
 .pavun-header__mega-link:hover {
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   transform: translateX(3px);
 }
 
@@ -405,7 +405,7 @@
   font-size: 9.5px;
   font-weight: 600;
   letter-spacing: 0.18em;
-  color: #8c7355;
+  color: var(--color-antique-gold, #D4AF7C);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
@@ -413,7 +413,7 @@
 .pavun-header__featured-title {
   font-family: var(--font-heading);
   font-size: 14px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0;
 }
 

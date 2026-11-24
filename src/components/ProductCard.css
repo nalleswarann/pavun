@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   z-index: 2;
   transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -81,12 +81,12 @@
 .pavun-product-card__wishlist-btn:hover {
   background-color: #ffffff;
   transform: scale(1.1);
-  color: #c48951;
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-product-card__wishlist-btn--active {
-  background-color: #093c2e;
-  color: #d5b687;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* Hover Quick Actions Overlay */
@@ -96,7 +96,7 @@
   left: 0;
   right: 0;
   padding: 16px;
-  background: linear-gradient(to top, rgba(9, 60, 46, 0.8) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(11, 77, 59, 0.88) 0%, transparent 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,19 +113,19 @@
 
 .pavun-product-card__quick-view-btn {
   background-color: #ffffff;
-  color: #093c2e;
-  border: none;
+  color: var(--color-emerald-green, #0B4D3B);
+  border: 1px solid var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.16em;
   padding: 8px 18px;
   cursor: pointer;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .pavun-product-card__quick-view-btn:hover {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -143,7 +143,7 @@
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #8c7355;
+  color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 4px;
 }
 
@@ -184,7 +184,7 @@
   font-family: var(--font-nav);
   font-size: 15px;
   font-weight: 600;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   letter-spacing: 0.04em;
 }
 
@@ -202,7 +202,7 @@
   justify-content: space-between;
   gap: 8px;
   padding-top: 10px;
-  border-top: 1px solid #f0eee9;
+  border-top: 1px solid var(--color-sand-beige, #E6DCC8);
 }
 
 .pavun-product-card__size-pills {
@@ -212,7 +212,7 @@
 
 .pavun-product-card__size-btn {
   background: transparent;
-  border: 1px solid #e0dbd3;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   color: #555c57;
   font-family: var(--font-nav);
   font-size: 10px;
@@ -224,13 +224,13 @@
 }
 
 .pavun-product-card__size-btn:hover {
-  border-color: #093c2e;
-  color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-product-card__size-btn--active {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -238,9 +238,9 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  background-color: #f7f3ee;
-  border: 1px solid #ded8cc;
-  color: #093c2e;
+  background-color: var(--color-ivory, #F8F7F0);
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
+  color: var(--color-emerald-green, #0B4D3B);
   font-family: var(--font-nav);
   font-size: 10px;
   font-weight: 600;
@@ -252,15 +252,15 @@
 }
 
 .pavun-product-card__add-btn:hover {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
 .pavun-product-card__add-btn--added {
-  background-color: #093c2e;
-  border-color: #093c2e;
-  color: #d5b687;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* Mobile & Tablet Fine-tuning */

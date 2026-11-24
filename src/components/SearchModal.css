@@ -202,7 +202,7 @@
 }
 
 .pavun-search-result-item:hover {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
   background-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
@@ -250,7 +250,7 @@
   font-family: var(--font-nav);
   font-size: 12px;
   font-weight: 600;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-search-no-results {
@@ -263,7 +263,7 @@
 .pavun-search-no-results p {
   font-size: 14px;
   font-weight: 500;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 6px 0;
 }
 

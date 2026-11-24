@@ -9,14 +9,14 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--color-ivory, #F8F7F0);
   width: 100%;
   overflow-x: hidden;
   position: relative;
 }
 
 .pavun-main-wrapper {
-  background-color: #ffffff;
+  background-color: var(--color-ivory, #F8F7F0);
   position: relative;
   width: 100%;
   display: flex;

@@ -47,13 +47,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   z-index: 10;
   transition: all 0.25s ease;
 }
 
 .pavun-pdm-close-btn:hover {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -91,8 +91,8 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: #093c2e;
-  color: #d5b687;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav);
   font-size: 10px;
   font-weight: 600;
@@ -109,7 +109,7 @@
   font-family: var(--font-nav);
   font-size: 10px;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -176,7 +176,7 @@
   font-family: var(--font-nav);
   font-size: 22px;
   font-weight: 600;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   letter-spacing: 0.04em;
 }
 
@@ -231,7 +231,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-pdm-guide-btn {
@@ -268,7 +268,7 @@
 }
 
 .pavun-pdm-size-guide-table th {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -292,13 +292,13 @@
 }
 
 .pavun-pdm-size-pill:hover {
-  border-color: #093c2e;
-  color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-pdm-size-pill--active {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -323,7 +323,7 @@
   height: 44px;
   cursor: pointer;
   font-size: 16px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,7 +334,7 @@
   font-family: var(--font-nav);
   font-size: 14px;
   font-weight: 600;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-pdm-add-btn {
@@ -343,7 +343,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   font-family: var(--font-nav);
@@ -357,12 +357,12 @@
 }
 
 .pavun-pdm-add-btn:hover {
-  background-color: #05261d;
+  background-color: var(--color-brand-green-dark, #07261D);
 }
 
 .pavun-pdm-add-btn--success {
-  background-color: #05261d;
-  color: #d5b687;
+  background-color: var(--color-brand-green-dark, #07261D);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-pdm-wishlist-btn {
@@ -375,19 +375,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   transition: all 0.25s ease;
 }
 
 .pavun-pdm-wishlist-btn:hover {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #c48951;
 }
 
 .pavun-pdm-wishlist-btn--active {
-  background-color: #093c2e;
-  border-color: #093c2e;
-  color: #d5b687;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* WhatsApp Stylist Button */
@@ -398,7 +398,7 @@
   gap: 8px;
   background-color: #f5faf7;
   border: 1px solid #25d366;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-family: var(--font-nav);
   font-size: 11px;
   font-weight: 600;
@@ -423,21 +423,21 @@
   padding: 11px 16px;
   margin-top: -10px;
   margin-bottom: 20px;
-  background-color: #faf7f2;
+  background-color: var(--color-ivory, #F8F7F0);
   border: 1px solid #d5cbbe;
   border-radius: 2px;
   font-family: var(--font-nav);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .pavun-pdm-fullpage-link:hover {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -448,7 +448,7 @@
   gap: 8px;
   padding: 14px 16px;
   background-color: #fbf9f6;
-  border-left: 2px solid #093c2e;
+  border-left: 2px solid var(--color-emerald-green, #0B4D3B);
   margin-bottom: 24px;
 }
 
@@ -462,7 +462,7 @@
 }
 
 .pavun-pdm-reassurance-item svg {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   flex-shrink: 0;
 }
 
@@ -495,7 +495,7 @@
 }
 
 .pavun-pdm-tab-title--active {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-pdm-tab-title--active::after {
@@ -505,7 +505,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-pdm-tab-body {

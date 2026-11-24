@@ -77,20 +77,33 @@
 }
 
 :root {
+  /* ========================================================================
+     PAVUN Haute Couture Royal Color System
+     ======================================================================== */
+  --color-emerald-green: #0B4D3B;
+  --color-royal-green: #1A6A53;
+  --color-antique-gold: #D4AF7C;
+  --color-ivory: #F8F7F0;
+  --color-sand-beige: #E6DCC8;
+
+  /* Semantic Color Mappings */
   --color-primary: #111111;
   --color-primary-light: #222222;
-  --color-secondary: #555555;
-  --color-muted: #777777;
-  --color-border: #e8e8e8;
-  --color-border-light: #f2f2f2;
-  --color-bg: #ffffff;
-  --color-bg-subtle: #fcfbfa;
-  --color-gold: #b38b4d;
-  --color-gold-light: #d4af37;
-  --color-brand-green: #093c2e;
-  --color-brand-green-dark: #05261d;
-  --color-brand-green-light: #124d3b;
-  --color-brand-tan: #a97b50;
+  --color-secondary: #4a4a4a;
+  --color-muted: #6e6b65;
+  --color-border: #E6DCC8;
+  --color-border-light: #f0ebe0;
+  --color-bg: #F8F7F0;
+  --color-bg-subtle: #ffffff;
+  --color-surface-ivory: #F8F7F0;
+  --color-surface-sand: #E6DCC8;
+  --color-gold: #D4AF7C;
+  --color-gold-light: #e4c498;
+  --color-gold-dark: #b8935c;
+  --color-brand-green: #0B4D3B;
+  --color-brand-green-dark: #07261D;
+  --color-brand-green-light: #1A6A53;
+  --color-brand-tan: #D4AF7C;
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1ebc59;
 

@@ -45,7 +45,7 @@
 }
 
 .pavun-contact-breadcrumb button:hover {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-co-sep {
@@ -53,7 +53,7 @@
 }
 
 .pavun-co-current {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -73,7 +73,7 @@
   font-size: 38px;
   font-weight: 400;
   letter-spacing: 0.16em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 16px 0;
   line-height: 1.25;
 }
@@ -81,7 +81,7 @@
 .pavun-contact-hero__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -134,7 +134,7 @@
   height: 52px;
   border-radius: 50%;
   background-color: #f7f3ee;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +164,7 @@
   font-family: var(--font-heading);
   font-size: 21px;
   font-weight: 500;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 10px 0;
 }
 
@@ -182,7 +182,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   text-decoration: none;
   transition: color 0.2s ease;
   margin-top: auto;
@@ -223,7 +223,7 @@
   font-family: var(--font-heading);
   font-size: 28px;
   font-weight: 400;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 28px 0;
 }
 
@@ -250,7 +250,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-contact-input-wrap input,
@@ -270,12 +270,12 @@
 .pavun-contact-input-wrap input:focus,
 .pavun-contact-input-wrap select:focus,
 .pavun-contact-input-wrap textarea:focus {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
   background-color: #ffffff;
 }
 
 .pavun-contact-submit-btn {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   font-family: var(--font-nav);
@@ -289,8 +289,8 @@
 }
 
 .pavun-contact-submit-btn:hover {
-  background-color: #05261d;
-  color: #d5b687;
+  background-color: var(--color-brand-green-dark, #07261D);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* Success View */
@@ -314,7 +314,7 @@
 .pavun-contact-success h3 {
   font-family: var(--font-heading);
   font-size: 24px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 10px 0;
 }
 
@@ -327,7 +327,7 @@
 }
 
 .pavun-contact-new-btn {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   font-family: var(--font-nav);
@@ -354,7 +354,7 @@
 .pavun-contact-info-card h3 {
   font-family: var(--font-heading);
   font-size: 18px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 18px 0;
   letter-spacing: 0.08em;
 }
@@ -370,17 +370,17 @@
 
 .pavun-contact-hours-list strong {
   display: block;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin-bottom: 2px;
 }
 
 .pavun-contact-info-card--green {
-  background: linear-gradient(135deg, #093c2e 0%, #05261d 100%);
+  background: linear-gradient(135deg, var(--color-emerald-green, #0B4D3B) 0%, var(--color-brand-green-dark, #07261D) 100%);
   color: #ffffff;
 }
 
 .pavun-contact-info-card--green h3 {
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-contact-info-card--green ul {
@@ -450,7 +450,7 @@
   font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 400;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 14px 0;
   letter-spacing: 0.08em;
 }
@@ -458,7 +458,7 @@
 .pavun-faq-divider {
   width: 48px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 16px;
 }
 
@@ -484,7 +484,7 @@
 }
 
 .pavun-faq-item--open {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-faq-question {
@@ -501,7 +501,7 @@
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 500;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   transition: color 0.2s ease;
 }
 
@@ -515,7 +515,7 @@
 
 .pavun-faq-item--open .pavun-faq-icon {
   transform: rotate(180deg);
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-faq-answer {

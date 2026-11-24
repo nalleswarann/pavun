@@ -12,7 +12,7 @@ interface LogoProps {
 
 /**
  * PAVUN Official Brand Logo
- * Displays the authentic emblem star & Pavun wordmark in regal forest green (#093c2e)
+ * Displays the authentic emblem star & Pavun wordmark in regal forest green (var(--color-emerald-green, #0B4D3B))
  * with the signature "un style'ku no rules" tagline.
  */
 export const Logo: React.FC<LogoProps> = ({

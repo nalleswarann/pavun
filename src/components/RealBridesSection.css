@@ -4,10 +4,10 @@
 
 .pavun-real-brides {
   width: 100%;
-  background-color: #faf7f2;
+  background-color: var(--color-ivory, #F8F7F0);
   padding: 92px 32px 108px;
   position: relative;
-  border-top: 1px solid #ebd9c8;
+  border-top: 1px solid var(--color-sand-beige, #E6DCC8);
 }
 
 .pavun-real-brides__container {
@@ -28,7 +28,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-antique-gold, #D4AF7C);
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -47,7 +47,7 @@
 .pavun-real-brides__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -71,17 +71,17 @@
   flex-direction: column;
   cursor: pointer;
   background-color: #ffffff;
-  border: 1px solid #ebd9c8;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 18px rgba(18, 14, 10, 0.04);
+  box-shadow: 0 4px 18px rgba(11, 77, 59, 0.04);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pavun-real-brides__card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(18, 14, 10, 0.12);
-  border-color: #d5b687;
+  box-shadow: 0 18px 40px rgba(11, 77, 59, 0.12);
+  border-color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* Media Frame */
@@ -125,10 +125,9 @@
   align-items: center;
   gap: 8px;
   padding: 9px 18px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--color-brand-green, #093c2e);
+  background: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
+  border: 1px solid var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav, inherit);
   font-size: 10px;
   font-weight: 700;
@@ -137,7 +136,7 @@
   border-radius: 20px;
   opacity: 0;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(11, 77, 59, 0.3);
   white-space: nowrap;
   z-index: 2;
 }
@@ -184,7 +183,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   margin: 0;
 }
 

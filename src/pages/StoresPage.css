@@ -45,7 +45,7 @@
 }
 
 .pavun-stores-breadcrumb button:hover {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-st-sep {
@@ -53,7 +53,7 @@
 }
 
 .pavun-st-current {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -73,7 +73,7 @@
   font-size: 38px;
   font-weight: 400;
   letter-spacing: 0.16em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 16px 0;
   line-height: 1.25;
 }
@@ -81,7 +81,7 @@
 .pavun-stores-hero__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -139,13 +139,13 @@
 }
 
 .pavun-stores-pill:hover {
-  border-color: #093c2e;
-  color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-stores-pill--active {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -198,8 +198,8 @@
   position: absolute;
   top: 14px;
   left: 14px;
-  background-color: #093c2e;
-  color: #d5b687;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav);
   font-size: 10px;
   font-weight: 600;
@@ -229,7 +229,7 @@
   font-family: var(--font-heading);
   font-size: 19px;
   font-weight: 500;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 16px 0;
   line-height: 1.35;
 }
@@ -246,13 +246,13 @@
 }
 
 .pavun-store-card__row svg {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .pavun-store-card__row a {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   text-decoration: none;
   font-weight: 500;
 }
@@ -307,7 +307,7 @@
 
 .pavun-store-card__book-btn {
   flex-grow: 1;
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   font-family: var(--font-nav);
   font-size: 11px;
@@ -320,8 +320,8 @@
 }
 
 .pavun-store-card__book-btn:hover {
-  background-color: #05261d;
-  color: #d5b687;
+  background-color: var(--color-brand-green-dark, #07261D);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-store-card__wa-btn {
@@ -379,14 +379,14 @@
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0.08em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 14px 0;
 }
 
 .pavun-booking-divider {
   width: 48px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 16px;
 }
 
@@ -421,7 +421,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-form-field input,
@@ -441,7 +441,7 @@
 .pavun-form-field input:focus,
 .pavun-form-field select:focus,
 .pavun-form-field textarea:focus {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
   background-color: #ffffff;
 }
 
@@ -453,7 +453,7 @@
 }
 
 .pavun-booking-submit-btn {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   font-family: var(--font-nav);
@@ -468,8 +468,8 @@
 }
 
 .pavun-booking-submit-btn:hover {
-  background-color: #05261d;
-  color: #d5b687;
+  background-color: var(--color-brand-green-dark, #07261D);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-booking-guarantee {
@@ -499,7 +499,7 @@
 .pavun-booking-success h3 {
   font-family: var(--font-heading);
   font-size: 26px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 12px 0;
 }
 
@@ -516,7 +516,7 @@
   display: inline-flex;
   flex-direction: column;
   background-color: #f7f3ee;
-  border: 1px dashed #093c2e;
+  border: 1px dashed var(--color-emerald-green, #0B4D3B);
   padding: 14px 28px;
   margin-bottom: 20px;
 }
@@ -533,7 +533,7 @@
   font-family: var(--font-heading);
   font-size: 22px;
   letter-spacing: 0.1em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-booking-note {
@@ -542,7 +542,7 @@
 }
 
 .pavun-booking-new-btn {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   font-family: var(--font-nav);

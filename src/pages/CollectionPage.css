@@ -4,7 +4,7 @@
 
 .pavun-collection-page {
   width: 100%;
-  background-color: #faf8f5;
+  background-color: var(--color-ivory, #F8F7F0);
   min-height: 100vh;
 }
 
@@ -12,10 +12,10 @@
    Hero Section
    -------------------------------------------------------------------------- */
 .pavun-collection-hero {
-  background: linear-gradient(180deg, #f7f3ee 0%, #faf8f5 100%);
+  background: linear-gradient(180deg, var(--color-sand-beige, #E6DCC8) 0%, var(--color-ivory, #F8F7F0) 100%);
   padding: 56px 24px 36px;
   text-align: center;
-  border-bottom: 1px solid #ebe5dc;
+  border-bottom: 1px solid var(--color-sand-beige, #E6DCC8);
 }
 
 .pavun-collection-hero__container {
@@ -38,7 +38,7 @@
 .pavun-collection-breadcrumb__link {
   background: none;
   border: none;
-  color: #8c7355;
+  color: var(--color-antique-gold, #D4AF7C);
   cursor: pointer;
   padding: 0;
   font-family: inherit;
@@ -49,7 +49,7 @@
 }
 
 .pavun-collection-breadcrumb__link:hover {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-collection-breadcrumb__sep {
@@ -57,7 +57,7 @@
 }
 
 .pavun-collection-breadcrumb__current {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -67,7 +67,7 @@
   font-size: 10.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #8c7355;
+  color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 12px;
   font-weight: 600;
 }
@@ -77,7 +77,7 @@
   font-size: 38px;
   font-weight: 400;
   letter-spacing: 0.16em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 16px 0;
   line-height: 1.25;
 }
@@ -85,7 +85,7 @@
 .pavun-collection-hero__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -154,7 +154,7 @@
 
 .pavun-subcat-pill {
   background: #ffffff;
-  border: 1px solid #dfd9ce;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   color: #4a544f;
   font-family: var(--font-nav);
   font-size: 11px;
@@ -168,16 +168,16 @@
 }
 
 .pavun-subcat-pill:hover {
-  border-color: #093c2e;
-  color: #093c2e;
+  border-color: var(--color-royal-green, #1A6A53);
+  color: var(--color-royal-green, #1A6A53);
 }
 
 .pavun-subcat-pill--active {
-  background-color: #093c2e;
-  border-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(9, 60, 46, 0.2);
+  box-shadow: 0 4px 12px rgba(11, 77, 59, 0.25);
 }
 
 /* Actions: Color & Sort Filters */
@@ -206,7 +206,7 @@
 .pavun-filter-select {
   border: 1px solid #dfd9ce;
   background-color: #ffffff;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-family: var(--font-nav);
   font-size: 11.5px;
   font-weight: 600;
@@ -218,7 +218,7 @@
 }
 
 .pavun-filter-select:focus {
-  border-color: #093c2e;
+  border-color: var(--color-emerald-green, #0B4D3B);
   box-shadow: 0 0 0 2px rgba(9, 60, 46, 0.1);
 }
 
@@ -266,7 +266,7 @@
 }
 
 .pavun-collection-reset-btn {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
   border: none;
   padding: 12px 28px;
@@ -279,7 +279,7 @@
 }
 
 .pavun-collection-reset-btn:hover {
-  background-color: #05261d;
+  background-color: var(--color-brand-green-dark, #07261D);
   transform: translateY(-2px);
 }
 
@@ -289,7 +289,7 @@
 .pavun-collection-concierge-card {
   max-width: 960px;
   margin: 64px auto 0;
-  background: linear-gradient(135deg, #093c2e 0%, #05261d 100%);
+  background: linear-gradient(135deg, var(--color-emerald-green, #0B4D3B) 0%, var(--color-brand-green-dark, #07261D) 100%);
   color: #ffffff;
   border-radius: 4px;
   padding: 44px 40px;
@@ -306,7 +306,7 @@
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.12em;
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
   margin: 0 0 10px 0;
 }
 

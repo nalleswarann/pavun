@@ -27,7 +27,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-antique-gold, #D4AF7C);
   text-transform: uppercase;
   margin-bottom: 14px;
 }
@@ -46,7 +46,7 @@
 .pavun-silhouettes__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -84,15 +84,15 @@
   aspect-ratio: 9 / 13;
   overflow: hidden;
   border-radius: 140px 140px 6px 6px;
-  background-color: #f6f2ec;
-  border: 1px solid #ebd9c8;
-  box-shadow: 0 8px 24px rgba(18, 14, 10, 0.06);
+  background-color: var(--color-ivory, #F8F7F0);
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
+  box-shadow: 0 8px 24px rgba(11, 77, 59, 0.06);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pavun-silhouettes__card:hover .pavun-silhouettes__frame {
-  border-color: #d5b687;
-  box-shadow: 0 16px 36px rgba(213, 182, 135, 0.28);
+  border-color: var(--color-antique-gold, #D4AF7C);
+  box-shadow: 0 16px 36px rgba(212, 175, 124, 0.28);
 }
 
 .pavun-silhouettes__img {
@@ -147,7 +147,7 @@
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   font-family: var(--font-nav, inherit);
   font-size: 10px;
   font-weight: 600;
@@ -183,7 +183,7 @@
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #8c7653;
+  color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 6px;
   display: block;
 }

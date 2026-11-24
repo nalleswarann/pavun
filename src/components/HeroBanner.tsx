@@ -45,7 +45,7 @@ const SLIDES: SlideData[] = [
     imageMobile: sareeCrimsonMobile,
     ctaText: 'EXPLORE NOW',
     ctaLink: '#wedding-chapter-gallery',
-    accentColor: '#d5b687',
+    accentColor: '#D4AF7C',
   },
   {
     id: 'banarasi-heirlooms',
@@ -57,7 +57,7 @@ const SLIDES: SlideData[] = [
     imageMobile: sareeKanjivaramMobile,
     ctaText: 'DISCOVER SAREES',
     ctaLink: '#sarees',
-    accentColor: '#e2bb7a',
+    accentColor: '#D4AF7C',
   },
   {
     id: 'kanjivaram-tissue',
@@ -69,7 +69,7 @@ const SLIDES: SlideData[] = [
     imageMobile: sareeTempleMobile,
     ctaText: 'DISCOVER HEIRLOOMS',
     ctaLink: '#sarees',
-    accentColor: '#c79d63',
+    accentColor: '#1A6A53',
   },
   {
     id: 'royal-heritage-archive',
@@ -81,7 +81,7 @@ const SLIDES: SlideData[] = [
     imageMobile: sareeBridalMobile,
     ctaText: 'EXPLORE HEIRLOOMS',
     ctaLink: '#sarees',
-    accentColor: '#d5b687',
+    accentColor: '#D4AF7C',
   },
 ];
 

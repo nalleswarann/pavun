@@ -188,7 +188,7 @@
 .pavun-hero-slider__arrow:hover {
   background: rgba(213, 182, 135, 0.92);
   color: #0b0c0e;
-  border-color: #d5b687;
+  border-color: var(--color-antique-gold, #D4AF7C);
   transform: translateY(-50%) scale(1.08);
   box-shadow: 0 6px 22px rgba(213, 182, 135, 0.5);
 }
@@ -201,7 +201,7 @@
   width: 100%;
   background-color: #fcf8f5;
   padding: 80px 32px 100px;
-  border-bottom: 1px solid #ebd9c8;
+  border-bottom: 1px solid var(--color-sand-beige, #E6DCC8);
 }
 
 .pavun-wedding-chapter__container {
@@ -243,7 +243,7 @@
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-antique-gold, #D4AF7C);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -262,7 +262,7 @@
 .pavun-wedding-chapter__story-divider {
   width: 38px;
   height: 1.5px;
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 20px;
 }
 
@@ -286,13 +286,13 @@
   display: inline-flex;
   flex-direction: column;
   padding: 11px 24px;
-  border: 1px solid #111111;
+  border: 1px solid var(--color-emerald-green, #0B4D3B);
   font-family: var(--font-nav);
   font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--color-emerald-green, #0B4D3B);
   text-decoration: none;
   background-color: transparent;
   transition: all 0.3s ease;
@@ -301,11 +301,11 @@
 }
 
 .pavun-wedding-chapter__story-btn:hover {
-  background-color: var(--color-brand-green, #093c2e);
-  border-color: var(--color-brand-green, #093c2e);
-  color: #ffffff;
+  background-color: var(--color-emerald-green, #0B4D3B);
+  border-color: var(--color-emerald-green, #0B4D3B);
+  color: var(--color-antique-gold, #D4AF7C);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(9, 60, 46, 0.2);
+  box-shadow: 0 6px 18px rgba(11, 77, 59, 0.25);
 }
 
 /* Photo Cards */
@@ -381,7 +381,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 4px;
 }
 
@@ -440,7 +440,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
 }
 
 .pavun-pillars-bar__sub {
@@ -456,7 +456,7 @@
 
 /* In-Store Atelier Booking Section */
 .pavun-atelier-banner {
-  background: linear-gradient(135deg, #0e1210 0%, #05261d 100%);
+  background: linear-gradient(135deg, #0e1210 0%, var(--color-brand-green-dark, #07261D) 100%);
   color: #ffffff;
   padding: 70px 24px;
   text-align: center;
@@ -469,7 +469,7 @@
 }
 
 .pavun-atelier-banner__icon {
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
   margin-bottom: 14px;
   display: inline-flex;
 }
@@ -512,9 +512,9 @@
 }
 
 .pavun-atelier-banner__btn--primary {
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   color: #0b1a14;
-  border: 1px solid #d5b687;
+  border: 1px solid var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-atelier-banner__btn--primary:hover {
@@ -623,7 +623,7 @@
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   text-transform: uppercase;
   margin-bottom: 8px;
 }

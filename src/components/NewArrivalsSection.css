@@ -4,11 +4,11 @@
 
 .pavun-new-arrivals {
   width: 100%;
-  background-color: #faf6f1;
+  background-color: var(--color-ivory, #F8F7F0);
   padding: 88px 32px 104px;
   position: relative;
-  border-top: 1px solid #ebd9c8;
-  border-bottom: 1px solid #ebd9c8;
+  border-top: 1px solid var(--color-sand-beige, #E6DCC8);
+  border-bottom: 1px solid var(--color-sand-beige, #E6DCC8);
 }
 
 .pavun-new-arrivals__container {
@@ -36,13 +36,13 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.28em;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-antique-gold, #D4AF7C);
   text-transform: uppercase;
   margin-bottom: 14px;
 }
 
 .pavun-new-arrivals__sparkle {
-  color: #c79d63;
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-new-arrivals__title {
@@ -59,7 +59,7 @@
 .pavun-new-arrivals__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -89,7 +89,7 @@
   text-transform: uppercase;
   padding: 10px 22px;
   border-radius: 24px;
-  border: 1px solid #dcd1c4;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   background-color: #ffffff;
   color: #444444;
   cursor: pointer;
@@ -97,15 +97,15 @@
 }
 
 .pavun-new-arrivals__tab:hover {
-  border-color: var(--color-brand-green, #093c2e);
-  color: var(--color-brand-green, #093c2e);
+  border-color: var(--color-royal-green, #1A6A53);
+  color: var(--color-royal-green, #1A6A53);
 }
 
 .pavun-new-arrivals__tab--active {
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
-  border-color: var(--color-brand-green, #093c2e);
-  box-shadow: 0 4px 14px rgba(9, 60, 46, 0.2);
+  border-color: var(--color-emerald-green, #0B4D3B);
+  box-shadow: 0 4px 14px rgba(11, 77, 59, 0.25);
 }
 
 /* --------------------------------------------------------------------------
@@ -153,9 +153,9 @@
 }
 
 .pavun-new-arrivals__arrow:hover {
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   color: #ffffff;
-  border-color: var(--color-brand-green, #093c2e);
+  border-color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   transform: scale(1.05);
 }
 
@@ -184,7 +184,7 @@
   max-width: 340px;
   scroll-snap-align: start;
   background-color: #ffffff;
-  border: 1px solid #ebd9c8;
+  border: 1px solid var(--color-sand-beige, #E6DCC8);
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -195,7 +195,7 @@
 .pavun-new-arrivals__card:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(18, 14, 10, 0.1);
-  border-color: #d5b687;
+  border-color: var(--color-antique-gold, #D4AF7C);
 }
 
 /* Media Wrap */
@@ -227,7 +227,7 @@
   left: 14px;
   background: rgba(14, 12, 10, 0.75);
   backdrop-filter: blur(4px);
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav, inherit);
   font-size: 9px;
   font-weight: 600;
@@ -313,11 +313,11 @@
 
 .pavun-new-arrivals__action-btn--quick:hover {
   background-color: #ffffff;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
 }
 
 .pavun-new-arrivals__action-btn--add {
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   color: #ffffff;
 }
 
@@ -350,7 +350,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
 }
 
 .pavun-new-arrivals__color-dot {
@@ -425,15 +425,15 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding: 16px 36px;
-  border: 1px solid var(--color-brand-green, #093c2e);
+  border: 1px solid var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   background-color: transparent;
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pavun-new-arrivals__all-btn:hover {
-  background-color: var(--color-brand-green, #093c2e);
+  background-color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(9, 60, 46, 0.25);

@@ -45,7 +45,7 @@
 }
 
 .pavun-lookbook-breadcrumb button:hover {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-lb-sep {
@@ -53,7 +53,7 @@
 }
 
 .pavun-lb-current {
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   font-weight: 600;
 }
 
@@ -73,7 +73,7 @@
   font-size: 38px;
   font-weight: 400;
   letter-spacing: 0.16em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 16px 0;
   line-height: 1.25;
 }
@@ -81,7 +81,7 @@
 .pavun-lookbook-hero__divider {
   width: 56px;
   height: 2px;
-  background-color: #d5b687;
+  background-color: var(--color-antique-gold, #D4AF7C);
   margin: 0 auto 18px;
 }
 
@@ -154,7 +154,7 @@
   top: 20px;
   left: 20px;
   background-color: rgba(9, 60, 46, 0.92);
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
   font-family: var(--font-nav);
   font-size: 10px;
   font-weight: 600;
@@ -180,7 +180,7 @@
   font-size: 32px;
   font-weight: 400;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 18px 0;
 }
 
@@ -191,7 +191,7 @@
   line-height: 1.6;
   color: #8c7355;
   margin: 0 0 16px 0;
-  border-left: 2px solid #d5b687;
+  border-left: 2px solid var(--color-antique-gold, #D4AF7C);
   padding-left: 16px;
 }
 
@@ -223,23 +223,23 @@
 }
 
 .pavun-lb-btn--primary {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
 .pavun-lb-btn--primary:hover {
-  background-color: #05261d;
-  color: #d5b687;
+  background-color: var(--color-brand-green-dark, #07261D);
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-lb-btn--secondary {
   background-color: transparent;
-  color: #093c2e;
-  border: 1px solid #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
+  border: 1px solid var(--color-emerald-green, #0B4D3B);
 }
 
 .pavun-lb-btn--secondary:hover {
-  background-color: #093c2e;
+  background-color: var(--color-emerald-green, #0B4D3B);
   color: #ffffff;
 }
 
@@ -311,7 +311,7 @@
 .pavun-lookbook-highlight__text h3 {
   font-family: var(--font-heading);
   font-size: 26px;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   margin: 0 0 12px 0;
 }
 

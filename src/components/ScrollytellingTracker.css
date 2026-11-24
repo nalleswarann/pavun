@@ -42,8 +42,8 @@
 }
 
 .pavun-scroll-to-top:hover {
-  background: var(--color-brand-green, #093c2e);
-  border-color: #d5b687;
+  background: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
+  border-color: var(--color-antique-gold, #D4AF7C);
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 12px 28px rgba(9, 60, 46, 0.4);
 }
@@ -51,7 +51,7 @@
 .pavun-scroll-to-top__arrow {
   font-size: 15px;
   line-height: 1;
-  color: #d5b687;
+  color: var(--color-antique-gold, #D4AF7C);
 }
 
 .pavun-scroll-to-top__label {

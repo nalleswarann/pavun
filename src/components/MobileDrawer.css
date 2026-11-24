@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 22px;
-  border-bottom: 2px solid var(--color-brand-green, #093c2e);
+  border-bottom: 2px solid var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   flex-shrink: 0;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .pavun-drawer__nav-row--active .pavun-drawer__nav-label {
-  color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, var(--color-emerald-green, #0B4D3B));
   font-weight: 600;
 }
 
@@ -174,7 +174,7 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: #093c2e;
+  color: var(--color-emerald-green, #0B4D3B);
   cursor: pointer;
 }
 
