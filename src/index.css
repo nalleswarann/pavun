@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Sagita Luxury Couture Serif Font (@font-face with local + webfont support)
+   ========================================================================== */
+@font-face {
+  font-family: 'Sagita';
+  src: local('Sagita'),
+       local('Sagita Regular'),
+       local('Sagita-Regular'),
+       local('Sagita Regular Regular'),
+       local('Sagita-Display'),
+       local('Sagita-Serif'),
+       url('/fonts/Sagita.woff2') format('woff2'),
+       url('/fonts/Sagita.woff') format('woff'),
+       url('/fonts/Sagita.otf') format('opentype'),
+       url('/fonts/Sagita.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sagita';
+  src: local('Sagita Italic'),
+       local('Sagita-Italic'),
+       url('/fonts/Sagita-Italic.woff2') format('woff2'),
+       url('/fonts/Sagita-Italic.woff') format('woff'),
+       url('/fonts/Sagita-Italic.otf') format('opentype'),
+       url('/fonts/Sagita-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sagita';
+  src: local('Sagita Bold'),
+       local('Sagita-Bold'),
+       url('/fonts/Sagita-Bold.woff2') format('woff2'),
+       url('/fonts/Sagita-Bold.woff') format('woff'),
+       url('/fonts/Sagita-Bold.otf') format('opentype'),
+       url('/fonts/Sagita-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Swagume Font (@font-face with local system font + webfont support)
+   ========================================================================== */
+@font-face {
+  font-family: 'Swagume';
+  src: local('Swagume'),
+       local('Swagume Regular'),
+       local('Swagume-Regular'),
+       local('Swagume-Personal-Use'),
+       local('Swagume-Trial'),
+       url('/fonts/Swagume.woff2') format('woff2'),
+       url('/fonts/Swagume.woff') format('woff'),
+       url('/fonts/Swagume.otf') format('opentype'),
+       url('/fonts/Swagume.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Swagume';
+  src: local('Swagume Italic'),
+       local('Swagume-Italic'),
+       url('/fonts/Swagume-Italic.woff2') format('woff2'),
+       url('/fonts/Swagume-Italic.woff') format('woff'),
+       url('/fonts/Swagume-Italic.otf') format('opentype'),
+       url('/fonts/Swagume-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #111111;
+  --color-primary-light: #222222;
+  --color-secondary: #555555;
+  --color-muted: #777777;
+  --color-border: #e8e8e8;
+  --color-border-light: #f2f2f2;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #fcfbfa;
+  --color-gold: #b38b4d;
+  --color-gold-light: #d4af37;
+  --color-brand-green: #093c2e;
+  --color-brand-green-dark: #05261d;
+  --color-brand-green-light: #124d3b;
+  --color-brand-tan: #a97b50;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1ebc59;
+
+  /* Primary Typography - Sagita Luxury Couture Serif */
+  --font-logo: 'Sagita', 'Swagume', 'Bodoni Moda', 'Playfair Display', Didot, 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Sagita', 'Swagume', 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Sagita', 'Swagume', 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-nav: 'Montserrat', 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Montserrat', 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --header-height-desktop: 132px;
+  --header-height-mobile: 68px;
+  --container-max: 1440px;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f7f6f4;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Custom scrollbar for luxury aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbfbfb;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}

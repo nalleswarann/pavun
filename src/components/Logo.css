@@ -1,0 +1,80 @@
+.pavun-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  line-height: 1;
+}
+
+.pavun-logo:hover {
+  opacity: 0.85;
+}
+
+.pavun-logo__img {
+  display: block;
+  width: auto;
+  height: 48px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.pavun-logo:hover .pavun-logo__img {
+  transform: scale(1.02);
+}
+
+/* Header Masthead Variant */
+.pavun-logo--header .pavun-logo__img {
+  height: 52px;
+}
+
+@media (max-width: 1200px) {
+  .pavun-logo--header .pavun-logo__img {
+    height: 46px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pavun-logo--header .pavun-logo__img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pavun-logo--header .pavun-logo__img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pavun-logo--header .pavun-logo__img {
+    height: 30px;
+  }
+}
+
+/* Compact / Drawer Variant */
+.pavun-logo--compact .pavun-logo__img,
+.pavun-logo--drawer .pavun-logo__img {
+  height: 38px;
+}
+
+/* Footer Variant */
+.pavun-logo--footer .pavun-logo__img {
+  height: 54px;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
+}
+
+.pavun-logo__subtext {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  margin-right: -0.45em;
+  color: #a8a8b8;
+  margin-top: 10px;
+  text-transform: uppercase;
+}

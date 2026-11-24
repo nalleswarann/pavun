@@ -1,0 +1,248 @@
+/* ==========================================================================
+   PAVUN Modern Couture Scroll Animations
+   Hardware-Accelerated (GPU), Responsive for Desktop, Tablet, & Mobile
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Titles & Section Headings
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-title {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-title.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Eyebrows with gentle fade */
+.pavun-reveal-eyebrow {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-eyebrow.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   2. Gold Luxury Accent Dividers (Expands from Center)
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-divider {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+  will-change: transform;
+}
+
+.pavun-reveal-divider.pavun-revealed {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------------------------------------
+   3. Paragraphs & Subtitles (Staggered Soft Rise)
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-text {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s,
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-text.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   4. Images & Lookbook Frames (Gentle Scale + Lift)
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-img {
+  opacity: 0;
+  transform: translateY(32px) scale(0.97);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.12s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-img.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive Cards (Products, Silhouettes, Real Brides)
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-card {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-card.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   6. Full Banners & Reassurance Bars
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-banner {
+  opacity: 0;
+  transform: translateY(40px) scale(0.985);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+  will-change: opacity, transform;
+}
+
+.pavun-reveal-banner.pavun-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   7. Staggered Delays for Multi-Item Grids
+   -------------------------------------------------------------------------- */
+
+.pavun-reveal-stagger > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.pavun-reveal-stagger > *:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.pavun-reveal-stagger > *:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.pavun-reveal-stagger > *:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.pavun-reveal-stagger > *:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.pavun-reveal-stagger > *:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+/* --------------------------------------------------------------------------
+   8. Parallax Depth and Sticky Pinning Animation System
+   -------------------------------------------------------------------------- */
+
+.pavun-parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.pavun-parallax-bg {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Hardware-Accelerated Sticky Pinning Elements */
+.pavun-sticky-pinned {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--sticky-top, 96px);
+  z-index: 10;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.pavun-pin-stage {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.pavun-gpu-composited {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Smooth layer transitions without compositing stall */
+.pavun-seamless-transition {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   9. Mobile Touchscreen Performance Tuning
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .pavun-reveal-title {
+    transform: translateY(24px);
+    transition-duration: 0.75s;
+  }
+
+  .pavun-reveal-text {
+    transform: translateY(16px);
+    transition-duration: 0.7s;
+  }
+
+  .pavun-reveal-img {
+    transform: translateY(22px) scale(0.98);
+    transition-duration: 0.8s;
+  }
+
+  .pavun-reveal-card {
+    transform: translateY(24px);
+    transition-duration: 0.75s;
+  }
+
+  .pavun-reveal-banner {
+    transform: translateY(24px) scale(0.99);
+    transition-duration: 0.85s;
+  }
+
+  /* Shorter delays on mobile for snappy feel */
+  .pavun-reveal-stagger > *:nth-child(2) { transition-delay: 0.08s; }
+  .pavun-reveal-stagger > *:nth-child(3) { transition-delay: 0.16s; }
+  .pavun-reveal-stagger > *:nth-child(4) { transition-delay: 0.24s; }
+}
+
+/* --------------------------------------------------------------------------
+   10. Accessibility (prefers-reduced-motion)
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pavun-reveal-title,
+  .pavun-reveal-eyebrow,
+  .pavun-reveal-divider,
+  .pavun-reveal-text,
+  .pavun-reveal-img,
+  .pavun-reveal-card,
+  .pavun-reveal-banner,
+  .pavun-reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

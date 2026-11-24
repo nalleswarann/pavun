@@ -1,0 +1,587 @@
+/* ==========================================================================
+   PAVUN Flagship Stores & Private Atelier Page Styles
+   ========================================================================== */
+
+.pavun-stores-page {
+  width: 100%;
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.pavun-stores-hero {
+  background: linear-gradient(180deg, #f7f3ee 0%, #faf8f5 100%);
+  padding: 60px 24px 40px;
+  text-align: center;
+  border-bottom: 1px solid #ebe5dc;
+}
+
+.pavun-stores-hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pavun-stores-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 20px;
+}
+
+.pavun-stores-breadcrumb button {
+  background: none;
+  border: none;
+  color: #8c7355;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  transition: color 0.2s ease;
+}
+
+.pavun-stores-breadcrumb button:hover {
+  color: #093c2e;
+}
+
+.pavun-st-sep {
+  color: #c9c2b8;
+}
+
+.pavun-st-current {
+  color: #093c2e;
+  font-weight: 600;
+}
+
+.pavun-stores-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8c7355;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.pavun-stores-hero__title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #093c2e;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.pavun-stores-hero__divider {
+  width: 56px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 18px;
+}
+
+.pavun-stores-hero__desc {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555d58;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Filter Cities Bar */
+.pavun-stores-filter-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebe5dc;
+  padding: 16px 32px;
+}
+
+.pavun-stores-filter-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pavun-stores-filter-label {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #7d8580;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pavun-stores-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pavun-stores-pill {
+  background: transparent;
+  border: 1px solid #dfd9ce;
+  color: #4a544f;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pavun-stores-pill:hover {
+  border-color: #093c2e;
+  color: #093c2e;
+}
+
+.pavun-stores-pill--active {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+}
+
+/* Stores List Section */
+.pavun-stores-list-sec {
+  padding: 56px 32px 80px;
+}
+
+.pavun-stores-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.pavun-stores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.pavun-store-card {
+  background-color: #ffffff;
+  border: 1px solid #eae5db;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.pavun-store-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: #f7f3ee;
+}
+
+.pavun-store-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.pavun-store-card:hover .pavun-store-card__media img {
+  transform: scale(1.05);
+}
+
+.pavun-store-card__city-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #093c2e;
+  color: #d5b687;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 5px 12px;
+  text-transform: uppercase;
+}
+
+.pavun-store-card__body {
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pavun-store-card__neighborhood {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #8c7355;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.pavun-store-card__title {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 500;
+  color: #093c2e;
+  margin: 0 0 16px 0;
+  line-height: 1.35;
+}
+
+.pavun-store-card__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  color: #555d58;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.pavun-store-card__row svg {
+  color: #093c2e;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pavun-store-card__row a {
+  color: #093c2e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pavun-store-card__time-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.pavun-store-card__services {
+  margin: 18px 0 22px;
+  padding-top: 14px;
+  border-top: 1px solid #f0eee9;
+  flex-grow: 1;
+}
+
+.pavun-store-card__services h4 {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #8c7355;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.pavun-store-card__services ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pavun-store-card__services li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #616a65;
+  margin-bottom: 6px;
+}
+
+.pavun-store-card__services li svg {
+  color: #25d366;
+  flex-shrink: 0;
+}
+
+.pavun-store-card__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.pavun-store-card__book-btn {
+  flex-grow: 1;
+  background-color: #093c2e;
+  color: #ffffff;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 11px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.pavun-store-card__book-btn:hover {
+  background-color: #05261d;
+  color: #d5b687;
+}
+
+.pavun-store-card__wa-btn {
+  width: 42px;
+  height: 42px;
+  background-color: #f5faf7;
+  border: 1px solid #25d366;
+  color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.pavun-store-card__wa-btn:hover {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+/* Booking Section */
+.pavun-booking-section {
+  padding: 40px 32px 100px;
+}
+
+.pavun-booking-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.pavun-booking-card {
+  background-color: #ffffff;
+  border: 1px solid #e5dfd4;
+  padding: 48px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+}
+
+.pavun-booking-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.pavun-booking-tag {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #8c7355;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pavun-booking-title {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #093c2e;
+  margin: 0 0 14px 0;
+}
+
+.pavun-booking-divider {
+  width: 48px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 16px;
+}
+
+.pavun-booking-desc {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555d58;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pavun-booking-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.pavun-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pavun-form-field--full {
+  grid-column: 1 / -1;
+}
+
+.pavun-form-field label {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #093c2e;
+}
+
+.pavun-form-field input,
+.pavun-form-field select,
+.pavun-form-field textarea {
+  border: 1px solid #ded8cc;
+  background-color: #fbf9f6;
+  color: #111814;
+  font-family: var(--font-nav);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 1px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.pavun-form-field input:focus,
+.pavun-form-field select:focus,
+.pavun-form-field textarea:focus {
+  border-color: #093c2e;
+  background-color: #ffffff;
+}
+
+.pavun-booking-submit-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pavun-booking-submit-btn {
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 16px 36px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 440px;
+  transition: all 0.25s ease;
+}
+
+.pavun-booking-submit-btn:hover {
+  background-color: #05261d;
+  color: #d5b687;
+}
+
+.pavun-booking-guarantee {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #7d8580;
+}
+
+/* Success state */
+.pavun-booking-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.pavun-booking-success__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #eaf7f0;
+  color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.pavun-booking-success h3 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  color: #093c2e;
+  margin: 0 0 12px 0;
+}
+
+.pavun-booking-success p {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555d58;
+  max-width: 520px;
+  margin: 0 auto 20px;
+}
+
+.pavun-booking-code-box {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: #f7f3ee;
+  border: 1px dashed #093c2e;
+  padding: 14px 28px;
+  margin-bottom: 20px;
+}
+
+.pavun-booking-code-box span {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #8c7355;
+  margin-bottom: 4px;
+}
+
+.pavun-booking-code-box strong {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: #093c2e;
+}
+
+.pavun-booking-note {
+  font-size: 12px !important;
+  color: #79837d !important;
+}
+
+.pavun-booking-new-btn {
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 12px 28px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pavun-stores-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pavun-stores-hero {
+    padding: 40px 16px 30px;
+  }
+  .pavun-stores-hero__title {
+    font-size: 26px;
+  }
+  .pavun-stores-filter-bar {
+    padding: 12px 16px;
+  }
+  .pavun-stores-list-sec {
+    padding: 30px 16px 60px;
+  }
+  .pavun-booking-section {
+    padding: 20px 16px 60px;
+  }
+  .pavun-booking-card {
+    padding: 28px 18px;
+  }
+  .pavun-booking-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

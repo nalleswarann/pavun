@@ -1,0 +1,563 @@
+/* ==========================================================================
+   PAVUN Product Detail Modal - Haute Couture Quick View
+   ========================================================================== */
+
+.pavun-pdm-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.pavun-pdm-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 24, 18, 0.75);
+  backdrop-filter: blur(8px);
+  animation: pavunPdmFadeIn 0.3s ease;
+}
+
+.pavun-pdm-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1060px;
+  max-height: 90vh;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  z-index: 2;
+  animation: pavunPdmSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-pdm-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f7f3ee;
+  border: 1px solid #ded8cc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #093c2e;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.pavun-pdm-close-btn:hover {
+  background-color: #093c2e;
+  color: #ffffff;
+}
+
+/* Layout */
+.pavun-pdm-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 580px;
+}
+
+/* Left Gallery */
+.pavun-pdm-gallery {
+  background-color: #f7f3ee;
+  display: flex;
+  flex-direction: column;
+}
+
+.pavun-pdm-gallery__main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.pavun-pdm-gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.pavun-pdm-gallery__tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #093c2e;
+  color: #d5b687;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+
+.pavun-pdm-gallery__reassurance {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 16px;
+  background-color: #eee8de;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: #093c2e;
+  font-weight: 600;
+}
+
+/* Right Content */
+.pavun-pdm-content {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.pavun-pdm-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pavun-pdm-category {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8c7355;
+  font-weight: 600;
+}
+
+.pavun-pdm-sku {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #99a09b;
+}
+
+.pavun-pdm-title {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  color: #0c1511;
+  line-height: 1.3;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.02em;
+}
+
+.pavun-pdm-subtitle {
+  font-family: var(--font-nav);
+  font-size: 13px;
+  color: #555d58;
+  margin: 0 0 16px 0;
+}
+
+/* Pricing */
+.pavun-pdm-pricing {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eeece7;
+  margin-bottom: 16px;
+}
+
+.pavun-pdm-price {
+  font-family: var(--font-nav);
+  font-size: 22px;
+  font-weight: 600;
+  color: #093c2e;
+  letter-spacing: 0.04em;
+}
+
+.pavun-pdm-original-price {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  color: #9da39f;
+  text-decoration: line-through;
+}
+
+.pavun-pdm-tax-note {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #79837d;
+  width: 100%;
+}
+
+/* Attributes */
+.pavun-pdm-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  font-family: var(--font-nav);
+  font-size: 12px;
+}
+
+.pavun-pdm-attr-label {
+  color: #79837d;
+  margin-right: 8px;
+}
+
+.pavun-pdm-attr-val {
+  color: #111814;
+  font-weight: 500;
+}
+
+/* Size Selector */
+.pavun-pdm-size-section {
+  margin-bottom: 22px;
+}
+
+.pavun-pdm-size-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pavun-pdm-size-label {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #093c2e;
+}
+
+.pavun-pdm-guide-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #8c7355;
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+.pavun-pdm-size-guide-table {
+  background-color: #fbf9f6;
+  border: 1px solid #ded8cc;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+}
+
+.pavun-pdm-size-guide-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-nav);
+  font-size: 11px;
+}
+
+.pavun-pdm-size-guide-table th,
+.pavun-pdm-size-guide-table td {
+  padding: 5px 8px;
+  text-align: left;
+  border-bottom: 1px solid #ece7dc;
+}
+
+.pavun-pdm-size-guide-table th {
+  color: #093c2e;
+  font-weight: 600;
+}
+
+.pavun-pdm-sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pavun-pdm-size-pill {
+  background-color: #ffffff;
+  border: 1px solid #ded8cc;
+  color: #333a36;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pavun-pdm-size-pill:hover {
+  border-color: #093c2e;
+  color: #093c2e;
+}
+
+.pavun-pdm-size-pill--active {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+}
+
+/* Actions Row */
+.pavun-pdm-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pavun-pdm-qty-picker {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ded8cc;
+  background-color: #f7f3ee;
+}
+
+.pavun-pdm-qty-picker button {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #093c2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pavun-pdm-qty-picker span {
+  padding: 0 8px;
+  font-family: var(--font-nav);
+  font-size: 14px;
+  font-weight: 600;
+  color: #093c2e;
+}
+
+.pavun-pdm-add-btn {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 0 20px;
+  height: 46px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.pavun-pdm-add-btn:hover {
+  background-color: #05261d;
+}
+
+.pavun-pdm-add-btn--success {
+  background-color: #05261d;
+  color: #d5b687;
+}
+
+.pavun-pdm-wishlist-btn {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #ded8cc;
+  background-color: #f7f3ee;
+  border-radius: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #093c2e;
+  transition: all 0.25s ease;
+}
+
+.pavun-pdm-wishlist-btn:hover {
+  border-color: #093c2e;
+  color: #c48951;
+}
+
+.pavun-pdm-wishlist-btn--active {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #d5b687;
+}
+
+/* WhatsApp Stylist Button */
+.pavun-pdm-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #f5faf7;
+  border: 1px solid #25d366;
+  color: #093c2e;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 11px 16px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: all 0.25s ease;
+}
+
+.pavun-pdm-whatsapp-btn:hover {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.pavun-pdm-fullpage-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  background-color: #faf7f2;
+  border: 1px solid #d5cbbe;
+  border-radius: 2px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #093c2e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pavun-pdm-fullpage-link:hover {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+}
+
+/* Reassurances */
+.pavun-pdm-reassurances {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  background-color: #fbf9f6;
+  border-left: 2px solid #093c2e;
+  margin-bottom: 24px;
+}
+
+.pavun-pdm-reassurance-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #444c47;
+}
+
+.pavun-pdm-reassurance-item svg {
+  color: #093c2e;
+  flex-shrink: 0;
+}
+
+/* Tabs */
+.pavun-pdm-tabs {
+  border-top: 1px solid #eeece7;
+  padding-top: 18px;
+}
+
+.pavun-pdm-tab-headers {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #eeece7;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.pavun-pdm-tab-title {
+  background: none;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #8c938e;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.pavun-pdm-tab-title--active {
+  color: #093c2e;
+}
+
+.pavun-pdm-tab-title--active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #093c2e;
+}
+
+.pavun-pdm-tab-body {
+  font-family: var(--font-nav);
+  font-size: 12px;
+  line-height: 1.6;
+  color: #555d58;
+}
+
+.pavun-pdm-tab-pane p {
+  margin: 0 0 10px 0;
+}
+
+.pavun-pdm-detail-list {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.pavun-pdm-detail-list li {
+  margin-bottom: 4px;
+}
+
+/* Modal Animations */
+@keyframes pavunPdmFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pavunPdmSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .pavun-pdm-layout {
+    grid-template-columns: 1fr;
+  }
+  .pavun-pdm-gallery__main {
+    min-height: 380px;
+    height: 420px;
+  }
+  .pavun-pdm-content {
+    padding: 24px 20px;
+  }
+  .pavun-pdm-title {
+    font-size: 20px;
+  }
+}

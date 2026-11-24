@@ -1,0 +1,401 @@
+/* ==========================================================================
+   PAVUN Mobile Navigation Drawer Styles
+   ========================================================================== */
+
+.pavun-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1090;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-drawer-backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pavun-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 86vw;
+  max-width: 380px;
+  background-color: #ffffff;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 12px 0 35px rgba(0, 0, 0, 0.16);
+  transform: translateX(-100%);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.pavun-drawer--open {
+  transform: translateX(0);
+}
+
+/* Header */
+.pavun-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-bottom: 2px solid var(--color-brand-green, #093c2e);
+  flex-shrink: 0;
+}
+
+.pavun-drawer__close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #111111;
+  background-color: #f7f7f7;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pavun-drawer__close-btn:hover {
+  background-color: #ededed;
+  transform: rotate(90deg);
+}
+
+/* Search Box Trigger */
+.pavun-drawer__search-box {
+  padding: 16px 20px 10px;
+  flex-shrink: 0;
+}
+
+.pavun-drawer__search-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #e8e8e8;
+  padding: 11px 14px;
+  border-radius: 2px;
+  font-size: 12.5px;
+  color: #777777;
+  font-family: var(--font-sans);
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.pavun-drawer__search-trigger:hover {
+  border-color: #cfcfcf;
+  background-color: #f3f3f3;
+}
+
+.pavun-drawer__search-icon {
+  color: #999999;
+}
+
+/* Body */
+.pavun-drawer__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 10px 20px 24px;
+}
+
+/* Main Nav List */
+.pavun-drawer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pavun-drawer__nav-item {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.pavun-drawer__nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pavun-drawer__nav-label {
+  font-family: var(--font-nav);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+.pavun-drawer__nav-row--active .pavun-drawer__nav-label {
+  color: var(--color-brand-green, #093c2e);
+  font-weight: 600;
+}
+
+.pavun-drawer__chevron {
+  display: inline-flex;
+  align-items: center;
+  color: #888888;
+}
+
+.pavun-drawer__chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.pavun-drawer__chevron-icon--rotated {
+  transform: rotate(180deg);
+}
+
+/* Sub-panel accordion */
+.pavun-drawer__sub-panel {
+  padding: 4px 6px 16px 14px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  animation: drawerSubFade 0.25s ease-out;
+}
+
+.pavun-drawer__view-all-btn {
+  width: 100%;
+  text-align: left;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  background: none;
+  border: none;
+  border-bottom: 1px dashed #ded8cc;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #093c2e;
+  cursor: pointer;
+}
+
+@keyframes drawerSubFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pavun-drawer__sub-group {
+  margin-top: 12px;
+}
+
+.pavun-drawer__sub-title {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9c6b30;
+  margin-bottom: 8px;
+}
+
+.pavun-drawer__sub-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pavun-drawer__sub-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 12.5px;
+  color: #444444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pavun-drawer__sub-link:hover {
+  color: #000000;
+}
+
+.pavun-drawer__sub-badge {
+  font-size: 8.5px;
+  padding: 1px 5px;
+  border-radius: 2px;
+  background-color: #f7ede2;
+  color: #9c6b30;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 6px;
+}
+
+.pavun-drawer__sub-arrow {
+  color: #bbbbbb;
+}
+
+/* WhatsApp Concierge Card */
+.pavun-drawer__whatsapp-card {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f7fdf9;
+  border: 1px solid #d4f2df;
+  border-radius: 6px;
+}
+
+.pavun-drawer__whatsapp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pavun-drawer__whatsapp-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(37, 211, 102, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pavun-drawer__whatsapp-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: #134e28;
+  margin: 0;
+}
+
+.pavun-drawer__whatsapp-status {
+  font-size: 10.5px;
+  color: #277745;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.pavun-drawer__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: inline-block;
+}
+
+.pavun-drawer__whatsapp-desc {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #4b6b55;
+  margin-bottom: 12px;
+}
+
+.pavun-drawer__whatsapp-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.pavun-drawer__whatsapp-btn:hover {
+  background-color: #1ebc59;
+}
+
+/* Quick Actions */
+.pavun-drawer__quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pavun-drawer__action-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: #fcfcfc;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.pavun-drawer__action-pill:hover {
+  background-color: #f2f2f2;
+}
+
+/* Currency */
+.pavun-drawer__currency {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #eeeeee;
+}
+
+.pavun-drawer__currency-label {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #666666;
+}
+
+.pavun-drawer__currency-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.pavun-drawer__curr-btn {
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  border: 1px solid #e0e0e0;
+  color: #666666;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.pavun-drawer__curr-btn--active {
+  background-color: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+/* Footer */
+.pavun-drawer__footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--color-border-light);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #999999;
+  text-align: center;
+  flex-shrink: 0;
+  background-color: #fafafa;
+}

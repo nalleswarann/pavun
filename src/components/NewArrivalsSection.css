@@ -1,0 +1,513 @@
+/* ==========================================================================
+   PAVUN New Arrivals (Haute Nouveautés 2026) Component Styles
+   ========================================================================== */
+
+.pavun-new-arrivals {
+  width: 100%;
+  background-color: #faf6f1;
+  padding: 88px 32px 104px;
+  position: relative;
+  border-top: 1px solid #ebd9c8;
+  border-bottom: 1px solid #ebd9c8;
+}
+
+.pavun-new-arrivals__container {
+  max-width: var(--container-max, 1400px);
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Filters
+   -------------------------------------------------------------------------- */
+
+.pavun-new-arrivals__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pavun-new-arrivals__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-nav, inherit);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--color-brand-green, #093c2e);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.pavun-new-arrivals__sparkle {
+  color: #c79d63;
+}
+
+.pavun-new-arrivals__title {
+  font-family: var(--font-heading, serif);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.pavun-new-arrivals__divider {
+  width: 56px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 18px;
+}
+
+.pavun-new-arrivals__subtitle {
+  font-family: var(--font-body, sans-serif);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555555;
+  max-width: 660px;
+  margin: 0 auto 32px;
+}
+
+/* Category Filter Tabs */
+.pavun-new-arrivals__filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pavun-new-arrivals__tab {
+  font-family: var(--font-nav, inherit);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 24px;
+  border: 1px solid #dcd1c4;
+  background-color: #ffffff;
+  color: #444444;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-new-arrivals__tab:hover {
+  border-color: var(--color-brand-green, #093c2e);
+  color: var(--color-brand-green, #093c2e);
+}
+
+.pavun-new-arrivals__tab--active {
+  background-color: var(--color-brand-green, #093c2e);
+  color: #ffffff;
+  border-color: var(--color-brand-green, #093c2e);
+  box-shadow: 0 4px 14px rgba(9, 60, 46, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Controls Bar (Count & Navigation Arrows)
+   -------------------------------------------------------------------------- */
+
+.pavun-new-arrivals__controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 0 4px;
+}
+
+.pavun-new-arrivals__count {
+  font-family: var(--font-nav, inherit);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #777777;
+  font-weight: 600;
+}
+
+.pavun-new-arrivals__arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pavun-new-arrivals__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d4c8bb;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 0 2px 0;
+}
+
+.pavun-new-arrivals__arrow:hover {
+  background-color: var(--color-brand-green, #093c2e);
+  color: #ffffff;
+  border-color: var(--color-brand-green, #093c2e);
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Track & Product Cards
+   -------------------------------------------------------------------------- */
+
+.pavun-new-arrivals__track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 4px 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.pavun-new-arrivals__track::-webkit-scrollbar {
+  display: none;
+}
+
+.pavun-new-arrivals__card {
+  flex: 0 0 calc((100% - 72px) / 4);
+  min-width: 280px;
+  max-width: 340px;
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border: 1px solid #ebd9c8;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.pavun-new-arrivals__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(18, 14, 10, 0.1);
+  border-color: #d5b687;
+}
+
+/* Media Wrap */
+.pavun-new-arrivals__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f1ede8;
+}
+
+.pavun-new-arrivals__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-new-arrivals__card:hover .pavun-new-arrivals__img {
+  transform: scale(1.06);
+}
+
+/* Badges */
+.pavun-new-arrivals__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(14, 12, 10, 0.75);
+  backdrop-filter: blur(4px);
+  color: #d5b687;
+  font-family: var(--font-nav, inherit);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid rgba(213, 182, 135, 0.4);
+  z-index: 2;
+}
+
+/* Wishlist Button */
+.pavun-new-arrivals__wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+.pavun-new-arrivals__wishlist-btn:hover {
+  background: #ffffff;
+  color: #b91c1c;
+  transform: scale(1.1);
+}
+
+.pavun-new-arrivals__wishlist-btn--active {
+  color: #b91c1c;
+}
+
+/* Card Hover Actions */
+.pavun-new-arrivals__actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.pavun-new-arrivals__card:hover .pavun-new-arrivals__actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pavun-new-arrivals__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 8px;
+  font-family: var(--font-nav, inherit);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pavun-new-arrivals__action-btn--quick {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #111111;
+}
+
+.pavun-new-arrivals__action-btn--quick:hover {
+  background-color: #ffffff;
+  color: var(--color-brand-green, #093c2e);
+}
+
+.pavun-new-arrivals__action-btn--add {
+  background-color: var(--color-brand-green, #093c2e);
+  color: #ffffff;
+}
+
+.pavun-new-arrivals__action-btn--add:hover {
+  background-color: #0d5440;
+}
+
+.pavun-new-arrivals__action-btn--added {
+  background-color: #166534;
+}
+
+/* Product Info */
+.pavun-new-arrivals__info {
+  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.pavun-new-arrivals__meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.pavun-new-arrivals__category {
+  font-family: var(--font-nav, inherit);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brand-green, #093c2e);
+}
+
+.pavun-new-arrivals__color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #c79d63;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pavun-new-arrivals__item-title {
+  font-family: var(--font-heading, serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #111111;
+  margin: 0 0 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pavun-new-arrivals__fabric {
+  font-family: var(--font-body, sans-serif);
+  font-size: 12px;
+  color: #777777;
+  margin: 0 0 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pavun-new-arrivals__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.pavun-new-arrivals__price {
+  font-family: var(--font-nav, inherit);
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.pavun-new-arrivals__original-price {
+  font-family: var(--font-body, sans-serif);
+  font-size: 13px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/* --------------------------------------------------------------------------
+   Footer CTA Button
+   -------------------------------------------------------------------------- */
+
+.pavun-new-arrivals__footer-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.pavun-new-arrivals__all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-nav, inherit);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: 1px solid var(--color-brand-green, #093c2e);
+  background-color: transparent;
+  color: var(--color-brand-green, #093c2e);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-new-arrivals__all-btn:hover {
+  background-color: var(--color-brand-green, #093c2e);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(9, 60, 46, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .pavun-new-arrivals {
+    padding: 68px 24px 84px;
+  }
+
+  .pavun-new-arrivals__card {
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 260px;
+  }
+
+  .pavun-new-arrivals__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pavun-new-arrivals {
+    padding: 56px 16px 68px;
+  }
+
+  .pavun-new-arrivals__header {
+    margin-bottom: 28px;
+  }
+
+  .pavun-new-arrivals__title {
+    font-size: 26px;
+    letter-spacing: 0.14em;
+  }
+
+  .pavun-new-arrivals__filters {
+    gap: 8px;
+  }
+
+  .pavun-new-arrivals__tab {
+    font-size: 10px;
+    padding: 8px 16px;
+    letter-spacing: 0.12em;
+  }
+
+  .pavun-new-arrivals__controls-bar {
+    display: none; /* Mobile uses natural touch swipe gestures */
+  }
+
+  .pavun-new-arrivals__track {
+    gap: 16px;
+    padding: 4px 4px 16px;
+  }
+
+  .pavun-new-arrivals__card {
+    flex: 0 0 78vw;
+    min-width: 250px;
+    max-width: 300px;
+  }
+
+  /* On mobile touch devices, keep actions accessible */
+  .pavun-new-arrivals__actions {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+  }
+
+  .pavun-new-arrivals__all-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 11px;
+  }
+}

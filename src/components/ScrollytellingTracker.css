@@ -1,0 +1,85 @@
+/* ==========================================================================
+   PAVUN Return to Top Button Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Quick Return to Top Button
+   -------------------------------------------------------------------------- */
+
+.pavun-scroll-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(14, 12, 10, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(213, 182, 135, 0.35);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 880;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+  animation: pavunTopBtnPop 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes pavunTopBtnPop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pavun-scroll-to-top:hover {
+  background: var(--color-brand-green, #093c2e);
+  border-color: #d5b687;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(9, 60, 46, 0.4);
+}
+
+.pavun-scroll-to-top__arrow {
+  font-size: 15px;
+  line-height: 1;
+  color: #d5b687;
+}
+
+.pavun-scroll-to-top__label {
+  font-family: var(--font-nav, inherit);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  margin-top: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .pavun-scroll-to-top {
+    bottom: 20px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .pavun-scroll-to-top__label {
+    display: none;
+  }
+
+  .pavun-scroll-to-top__arrow {
+    font-size: 16px;
+  }
+}

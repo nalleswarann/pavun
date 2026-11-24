@@ -1,0 +1,475 @@
+/* ==========================================================================
+   PAVUN Collection Page Styles - Fluid, Responsive for All Devices
+   ========================================================================== */
+
+.pavun-collection-page {
+  width: 100%;
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.pavun-collection-hero {
+  background: linear-gradient(180deg, #f7f3ee 0%, #faf8f5 100%);
+  padding: 56px 24px 36px;
+  text-align: center;
+  border-bottom: 1px solid #ebe5dc;
+}
+
+.pavun-collection-hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+.pavun-collection-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 18px;
+}
+
+.pavun-collection-breadcrumb__link {
+  background: none;
+  border: none;
+  color: #8c7355;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.pavun-collection-breadcrumb__link:hover {
+  color: #093c2e;
+}
+
+.pavun-collection-breadcrumb__sep {
+  color: #c9c2b8;
+}
+
+.pavun-collection-breadcrumb__current {
+  color: #093c2e;
+  font-weight: 600;
+}
+
+.pavun-collection-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-nav);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8c7355;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.pavun-collection-hero__title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #093c2e;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.pavun-collection-hero__divider {
+  width: 56px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 18px;
+}
+
+.pavun-collection-hero__desc {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555d58;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Listing Section & Container
+   -------------------------------------------------------------------------- */
+.pavun-collection-body {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.pavun-collection-container {
+  max-width: var(--container-max, 1440px);
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Sticky Filter & Sorting Toolbar
+   -------------------------------------------------------------------------- */
+.pavun-collection-toolbar {
+  position: sticky;
+  top: 72px;
+  z-index: 25;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #ebe5dc;
+  margin-left: -32px;
+  margin-right: -32px;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+/* Subcategory Horizontal Pills */
+.pavun-collection-subcats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 0;
+}
+
+.pavun-collection-subcats::-webkit-scrollbar {
+  display: none;
+}
+
+.pavun-subcat-pill {
+  background: #ffffff;
+  border: 1px solid #dfd9ce;
+  color: #4a544f;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 7px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pavun-subcat-pill:hover {
+  border-color: #093c2e;
+  color: #093c2e;
+}
+
+.pavun-subcat-pill--active {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(9, 60, 46, 0.2);
+}
+
+/* Actions: Color & Sort Filters */
+.pavun-collection-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pavun-filter-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pavun-filter-label {
+  font-family: var(--font-nav);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #7d8580;
+  text-transform: uppercase;
+}
+
+.pavun-filter-select {
+  border: 1px solid #dfd9ce;
+  background-color: #ffffff;
+  color: #093c2e;
+  font-family: var(--font-nav);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pavun-filter-select:focus {
+  border-color: #093c2e;
+  box-shadow: 0 0 0 2px rgba(9, 60, 46, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Product Count Indicator
+   -------------------------------------------------------------------------- */
+.pavun-collection-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 16px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #8c7355;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f0eae1;
+  margin-bottom: 32px;
+}
+
+/* --------------------------------------------------------------------------
+   Product Grid (3 Columns on Desktop, 2 on Tablet, 2 on Mobile)
+   -------------------------------------------------------------------------- */
+.pavun-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+}
+
+/* Empty State */
+.pavun-collection-empty {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  border: 1px solid #ebe5dc;
+  font-family: var(--font-nav);
+  color: #555d58;
+}
+
+.pavun-collection-empty p {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.pavun-collection-reset-btn {
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.pavun-collection-reset-btn:hover {
+  background-color: #05261d;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Atelier Concierge Callout Card
+   -------------------------------------------------------------------------- */
+.pavun-collection-concierge-card {
+  max-width: 960px;
+  margin: 64px auto 0;
+  background: linear-gradient(135deg, #093c2e 0%, #05261d 100%);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 44px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 20px 48px rgba(9, 60, 46, 0.2);
+  border: 1px solid rgba(213, 182, 135, 0.25);
+}
+
+.pavun-concierge-info h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #d5b687;
+  margin: 0 0 10px 0;
+}
+
+.pavun-concierge-info p {
+  font-family: var(--font-nav);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #d1dad5;
+  margin: 0;
+  max-width: 580px;
+}
+
+.pavun-concierge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 14px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.pavun-concierge-btn:hover {
+  background-color: #1eb956;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Desktop 1440px, Tablet 768px, Mobile 375px)
+   ========================================================================== */
+
+/* Laptop & Compact Desktop (1024px - 1280px) */
+@media (max-width: 1280px) {
+  .pavun-collection-grid {
+    gap: 24px;
+  }
+}
+
+/* Tablet Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+  .pavun-collection-container {
+    padding: 0 24px;
+  }
+
+  .pavun-collection-toolbar {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 12px 24px;
+  }
+
+  .pavun-collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pavun-collection-concierge-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+    gap: 20px;
+  }
+
+  .pavun-concierge-info p {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Screens (Under 768px) */
+@media (max-width: 768px) {
+  .pavun-collection-hero {
+    padding: 36px 16px 24px;
+  }
+
+  .pavun-collection-hero__title {
+    font-size: 26px;
+    letter-spacing: 0.12em;
+  }
+
+  .pavun-collection-hero__desc {
+    font-size: 13px;
+  }
+
+  .pavun-collection-container {
+    padding: 0 14px;
+  }
+
+  .pavun-collection-toolbar {
+    position: static;
+    top: auto;
+    margin-left: -14px;
+    margin-right: -14px;
+    padding: 12px 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .pavun-collection-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .pavun-collection-count-bar {
+    font-size: 10px;
+    padding: 14px 0 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Two-column boutique product grid on mobile */
+  .pavun-collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .pavun-collection-concierge-card {
+    margin-top: 40px;
+    padding: 28px 16px;
+  }
+
+  .pavun-concierge-info h3 {
+    font-size: 18px;
+  }
+
+  .pavun-concierge-info p {
+    font-size: 12px;
+  }
+
+  .pavun-concierge-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 11px;
+  }
+}
+
+/* Extra Small Phones (Under 400px - e.g. 375px / 360px) */
+@media (max-width: 400px) {
+  .pavun-collection-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .pavun-filter-select-wrap {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .pavun-filter-select {
+    flex: 1;
+    max-width: 190px;
+  }
+
+  .pavun-subcat-pill {
+    padding: 6px 14px;
+    font-size: 10px;
+  }
+}

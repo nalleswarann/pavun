@@ -1,0 +1,572 @@
+/* ==========================================================================
+   PAVUN Client Services & Contact Page Styles
+   ========================================================================== */
+
+.pavun-contact-page {
+  width: 100%;
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.pavun-contact-hero {
+  background: linear-gradient(180deg, #f7f3ee 0%, #faf8f5 100%);
+  padding: 60px 24px 40px;
+  text-align: center;
+  border-bottom: 1px solid #ebe5dc;
+}
+
+.pavun-contact-hero__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pavun-contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 20px;
+}
+
+.pavun-contact-breadcrumb button {
+  background: none;
+  border: none;
+  color: #8c7355;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  transition: color 0.2s ease;
+}
+
+.pavun-contact-breadcrumb button:hover {
+  color: #093c2e;
+}
+
+.pavun-co-sep {
+  color: #c9c2b8;
+}
+
+.pavun-co-current {
+  color: #093c2e;
+  font-weight: 600;
+}
+
+.pavun-contact-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8c7355;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.pavun-contact-hero__title {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  color: #093c2e;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.pavun-contact-hero__divider {
+  width: 56px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 18px;
+}
+
+.pavun-contact-hero__desc {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555d58;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.pavun-contact-cards-sec {
+  padding: 56px 32px 40px;
+}
+
+.pavun-contact-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.pavun-contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.pavun-contact-card {
+  background-color: #ffffff;
+  border: 1px solid #eae5db;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pavun-contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
+}
+
+.pavun-contact-card--featured {
+  border-color: #25d366;
+  background: linear-gradient(180deg, #f9fdfa 0%, #ffffff 100%);
+}
+
+.pavun-contact-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #f7f3ee;
+  color: #093c2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pavun-contact-card__icon--wa {
+  background-color: #eaf8ef;
+  color: #25d366;
+}
+
+.pavun-contact-card__email-icon {
+  font-size: 22px;
+}
+
+.pavun-contact-card__label {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: #8c7355;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.pavun-contact-card h3 {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 500;
+  color: #093c2e;
+  margin: 0 0 10px 0;
+}
+
+.pavun-contact-card p {
+  font-family: var(--font-nav);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555d58;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+.pavun-contact-card__link {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #093c2e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.pavun-contact-card__link:hover {
+  color: #25d366;
+}
+
+/* Form & Info Section */
+.pavun-contact-form-sec {
+  padding: 40px 32px 80px;
+}
+
+.pavun-contact-form-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+}
+
+.pavun-contact-form-box {
+  background-color: #ffffff;
+  border: 1px solid #eae5db;
+  padding: 40px;
+}
+
+.pavun-contact-form-tag {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #8c7355;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pavun-contact-form-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 400;
+  color: #093c2e;
+  margin: 0 0 28px 0;
+}
+
+.pavun-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pavun-contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pavun-contact-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pavun-contact-input-wrap label {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #093c2e;
+}
+
+.pavun-contact-input-wrap input,
+.pavun-contact-input-wrap select,
+.pavun-contact-input-wrap textarea {
+  border: 1px solid #ded8cc;
+  background-color: #fbf9f6;
+  color: #111814;
+  font-family: var(--font-nav);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 1px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.pavun-contact-input-wrap input:focus,
+.pavun-contact-input-wrap select:focus,
+.pavun-contact-input-wrap textarea:focus {
+  border-color: #093c2e;
+  background-color: #ffffff;
+}
+
+.pavun-contact-submit-btn {
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.25s ease;
+}
+
+.pavun-contact-submit-btn:hover {
+  background-color: #05261d;
+  color: #d5b687;
+}
+
+/* Success View */
+.pavun-contact-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.pavun-contact-success__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #eaf7f0;
+  color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.pavun-contact-success h3 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: #093c2e;
+  margin: 0 0 10px 0;
+}
+
+.pavun-contact-success p {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555d58;
+  margin: 0 0 24px 0;
+}
+
+.pavun-contact-new-btn {
+  background-color: #093c2e;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+
+/* Info Box */
+.pavun-contact-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pavun-contact-info-card {
+  background-color: #ffffff;
+  border: 1px solid #eae5db;
+  padding: 32px;
+}
+
+.pavun-contact-info-card h3 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: #093c2e;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.08em;
+}
+
+.pavun-contact-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-nav);
+  font-size: 12px;
+  color: #555d58;
+}
+
+.pavun-contact-hours-list strong {
+  display: block;
+  color: #093c2e;
+  margin-bottom: 2px;
+}
+
+.pavun-contact-info-card--green {
+  background: linear-gradient(135deg, #093c2e 0%, #05261d 100%);
+  color: #ffffff;
+}
+
+.pavun-contact-info-card--green h3 {
+  color: #d5b687;
+}
+
+.pavun-contact-info-card--green ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.pavun-contact-info-card--green li {
+  font-family: var(--font-nav);
+  font-size: 12px;
+  color: #e2ebe6;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.pavun-contact-info-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.pavun-contact-info-btn:hover {
+  background-color: #1eb956;
+}
+
+/* FAQ Section */
+.pavun-faq-section {
+  padding: 40px 32px 100px;
+  background-color: #f7f4ee;
+  border-top: 1px solid #eae5db;
+}
+
+.pavun-faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.pavun-faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pavun-faq-tag {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #8c7355;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pavun-faq-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 400;
+  color: #093c2e;
+  margin: 0 0 14px 0;
+  letter-spacing: 0.08em;
+}
+
+.pavun-faq-divider {
+  width: 48px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 16px;
+}
+
+.pavun-faq-desc {
+  font-family: var(--font-nav);
+  font-size: 14px;
+  color: #555d58;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pavun-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pavun-faq-item {
+  background-color: #ffffff;
+  border: 1px solid #e5dfd4;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.pavun-faq-item--open {
+  border-color: #093c2e;
+}
+
+.pavun-faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 500;
+  color: #093c2e;
+  transition: color 0.2s ease;
+}
+
+.pavun-faq-icon {
+  color: #8c7355;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.pavun-faq-item--open .pavun-faq-icon {
+  transform: rotate(180deg);
+  color: #093c2e;
+}
+
+.pavun-faq-answer {
+  padding: 0 24px 22px;
+  font-family: var(--font-nav);
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555d58;
+  border-top: 1px solid #f2ede4;
+  padding-top: 16px;
+}
+
+.pavun-faq-answer p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .pavun-contact-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pavun-contact-form-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pavun-contact-hero {
+    padding: 40px 16px 30px;
+  }
+  .pavun-contact-hero__title {
+    font-size: 26px;
+  }
+  .pavun-contact-cards-sec {
+    padding: 30px 16px;
+  }
+  .pavun-contact-form-sec {
+    padding: 20px 16px 60px;
+  }
+  .pavun-contact-form-box {
+    padding: 24px 18px;
+  }
+  .pavun-contact-form-row {
+    grid-template-columns: 1fr;
+  }
+  .pavun-faq-section {
+    padding: 40px 16px 60px;
+  }
+  .pavun-faq-question {
+    font-size: 15px;
+    padding: 16px 18px;
+  }
+}

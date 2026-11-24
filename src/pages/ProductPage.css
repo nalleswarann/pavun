@@ -1,0 +1,1479 @@
+/* ==========================================================================
+   AZA FASHIONS LUXURY DESIGNER PRODUCT DETAIL PAGE (PDP) STYLES
+   Direct Match to Reference: Mrunal Khimji Navy Crepe Saree (media_1795523070668_aa9ec258.jpg)
+   Responsive: Desktop (1440px), Laptop (1024px), Tablet (768px), Mobile (375px/390px)
+   ========================================================================== */
+
+.az-pdp {
+  width: 100%;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  min-height: 100vh;
+  padding-bottom: 90px;
+  font-family: var(--font-nav, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+}
+
+.az-pdp__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* Toast Notification */
+.az-pdp__toast {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111111;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 3000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation: azToastFade 0.3s ease;
+}
+
+@keyframes azToastFade {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   1. Breadcrumbs
+   -------------------------------------------------------------------------- */
+.az-pdp__breadcrumb-bar {
+  width: 100%;
+  background-color: #faf8f5;
+  border-bottom: 1px solid #ebe5dc;
+  padding: 10px 0;
+}
+
+.az-pdp__breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11.5px;
+  color: #7a756d;
+}
+
+.az-pdp__breadcrumb-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #7a756d;
+  font-family: inherit;
+  font-size: inherit;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.az-pdp__breadcrumb-link:hover {
+  color: #111111;
+}
+
+.az-pdp__breadcrumb-link--designer {
+  font-weight: 700;
+  color: #111111;
+  text-transform: capitalize;
+}
+
+.az-pdp__breadcrumb-sep {
+  color: #c7c0b5;
+  user-select: none;
+}
+
+.az-pdp__breadcrumb-current {
+  color: #333333;
+  font-weight: 600;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Showcase Grid (Left: 2-Column Photo Grid | Right: Sticky Buy Box)
+   -------------------------------------------------------------------------- */
+.az-pdp__main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: 48px;
+  align-items: start;
+  padding-top: 24px;
+  padding-bottom: 60px;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: 2-Column Staggered Photography Grid (Reference Design)
+   -------------------------------------------------------------------------- */
+.az-pdp__gallery-col {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.az-pdp__2col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.az-pdp__photo-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #f7f4ee;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #eee8df;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.az-pdp__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.az-pdp__photo-card:hover .az-pdp__photo-img {
+  transform: scale(1.025);
+}
+
+/* Floating Badge 1 (Bottom Right): Contains: Saree,Blouse ⓘ */
+.az-pdp__contains-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(17, 17, 17, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
+
+.az-pdp__contains-icon {
+  opacity: 0.85;
+}
+
+/* Floating Badge 2 (Top Right): View Similar */
+.az-pdp__view-similar-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d5cbbe;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.az-pdp__view-similar-btn:hover {
+  background: #fbf9f6;
+  border-color: #111111;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Sticky Designer Identity & Buying Engine
+   -------------------------------------------------------------------------- */
+.az-pdp__info-col {
+  width: 100%;
+}
+
+.az-pdp__sticky-box {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 8px;
+}
+
+/* Badges Row (✨ New Arrivals + ♡ Wishlisted by 50+) */
+.az-pdp__badges-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.az-pdp__badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.az-pdp__badge-pill--arrival {
+  background-color: #fbf4ea;
+  color: #72431d;
+}
+
+.az-pdp__badge-pill--wishlist {
+  background-color: #fbf4ea;
+  color: #72431d;
+}
+
+.az-pdp__badge-icon {
+  color: #72431d;
+}
+
+.az-pdp__badge-icon--heart {
+  stroke: #c0451e;
+}
+
+/* Designer Header with Chevron + Share/Wishlist Icons */
+.az-pdp__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.az-pdp__designer-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.az-pdp__designer-link:hover {
+  opacity: 0.75;
+}
+
+.az-pdp__designer-chevron {
+  font-size: 20px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1;
+}
+
+.az-pdp__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.az-pdp__header-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.az-pdp__header-btn:hover {
+  background: #f7f3ec;
+  color: #000000;
+}
+
+.az-pdp__header-btn--active {
+  color: #c0451e;
+}
+
+/* Product Title */
+.az-pdp__title {
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Price Section */
+.az-pdp__price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.az-pdp__price-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.az-pdp__price-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.01em;
+}
+
+.az-pdp__price-info {
+  color: #888888;
+  cursor: pointer;
+}
+
+.az-pdp__tax-note {
+  font-size: 11px;
+  color: #888888;
+}
+
+/* Size Selection with Ruler Guide */
+.az-pdp__size-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.az-pdp__size-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.az-pdp__size-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+}
+
+.az-pdp__size-guide-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #222222;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.az-pdp__size-guide-link:hover {
+  color: #b8431f;
+}
+
+.az-pdp__size-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.az-pdp__size-chip {
+  min-width: 44px;
+  height: 38px;
+  padding: 0 12px;
+  background: #ffffff;
+  border: 1px solid #dcd6cc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.az-pdp__size-chip:hover {
+  border-color: #111111;
+  background-color: #faf8f5;
+}
+
+.az-pdp__size-chip--active {
+  border-color: #111111;
+  background-color: #ffffff;
+  color: #111111;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px #111111;
+}
+
+/* Qty & Primary Action CTAs (Terracotta Red Add To Cart + Speak To Stylist) */
+.az-pdp__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.az-pdp__qty-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #dcd6cc;
+  border-radius: 4px;
+  height: 48px;
+  padding: 0 10px;
+  background: #ffffff;
+}
+
+.az-pdp__qty-label {
+  font-size: 12.5px;
+  color: #666666;
+}
+
+.az-pdp__qty-select {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  outline: none;
+}
+
+.az-pdp__btn-add-cart {
+  flex: 1.4;
+  height: 48px;
+  background-color: #b8431f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.az-pdp__btn-add-cart:hover {
+  background-color: #a03716;
+}
+
+.az-pdp__btn-add-cart--added {
+  background-color: #093c2e;
+}
+
+.az-pdp__btn-speak-stylist {
+  flex: 1.1;
+  height: 48px;
+  background: #ffffff;
+  color: #111111;
+  border: 1.5px solid #111111;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.az-pdp__btn-speak-stylist:hover {
+  background: #faf8f5;
+  border-color: #000000;
+}
+
+/* Pincode & Delivery Options Card */
+.az-pdp__delivery-card {
+  background: #faf8f5;
+  border: 1px solid #ebe5dc;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.az-pdp__location-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee8e0;
+}
+
+.az-pdp__location-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.az-pdp__pin-icon {
+  color: #555555;
+}
+
+.az-pdp__pincode-val {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.az-pdp__change-pin-btn {
+  background: none;
+  border: none;
+  color: #333333;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.az-pdp__delivery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.az-pdp__delivery-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e2dcd2;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.az-pdp__delivery-radio input[type="radio"] {
+  accent-color: #b8431f;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.az-pdp__delivery-radio--selected {
+  border-color: #b8431f;
+  background: #fffcf9;
+}
+
+.az-pdp__radio-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.az-pdp__radio-text {
+  font-size: 12.5px;
+  color: #222222;
+}
+
+.az-pdp__highlight-date {
+  color: #b8431f;
+}
+
+.az-pdp__fast-tag {
+  display: inline-block;
+  background: #f3ece4;
+  color: #72431d;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+.az-pdp__delivery-footer {
+  font-size: 12px;
+  color: #666666;
+}
+
+.az-pdp__chat-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #111111;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Shop with Confidence (2-Column Trust Matrix) */
+.az-pdp__confidence-section {
+  padding-top: 20px;
+  border-top: 1px solid #ebe5dc;
+}
+
+.az-pdp__section-heading {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 12px 0;
+}
+
+.az-pdp__confidence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.az-pdp__confidence-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.az-pdp__check-mark {
+  color: #093c2e;
+  font-weight: 700;
+}
+
+/* Offers & EMI Section */
+.az-pdp__offers-section {
+  padding-top: 20px;
+  border-top: 1px solid #ebe5dc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.az-pdp__coupon-card {
+  background: #fdfaf6;
+  border: 1px dashed #d5b687;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.az-pdp__coupon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.az-pdp__coupon-title {
+  font-size: 13px;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.az-pdp__copy-btn {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #555555;
+  display: inline-flex;
+  align-items: center;
+}
+
+.az-pdp__coupon-more {
+  background: none;
+  border: none;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.az-pdp__coupon-desc {
+  display: block;
+  font-size: 11px;
+  color: #72431d;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.az-pdp__aza-cash-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0d8cc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #222222;
+  background: #ffffff;
+}
+
+.az-pdp__emi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e0d8cc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #222222;
+  background: #ffffff;
+}
+
+.az-pdp__emi-link {
+  color: #666666;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Accordion Specification Tabs */
+.az-pdp__accordion-group {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ebe5dc;
+  margin-top: 10px;
+}
+
+.az-pdp__accordion-item {
+  border-bottom: 1px solid #ebe5dc;
+}
+
+.az-pdp__accordion-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.az-pdp__accordion-icon {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.az-pdp__accordion-body {
+  padding: 0 0 18px 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #555048;
+}
+
+.az-pdp__desc-text {
+  margin: 0 0 12px 0;
+}
+
+.az-pdp__specs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.az-pdp__specs-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.az-pdp__spec-bullet {
+  color: #b8431f;
+  font-size: 11px;
+}
+
+.az-pdp__specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.az-pdp__specs-table th,
+.az-pdp__specs-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f2ede4;
+  font-size: 12px;
+  text-align: left;
+}
+
+.az-pdp__specs-table th {
+  width: 35%;
+  font-weight: 600;
+  color: #222222;
+}
+
+.az-pdp__specs-table td {
+  color: #555048;
+}
+
+.az-pdp__shipping-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.az-pdp__shipping-rules p {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Complete The Look Cross-Sell Section
+   -------------------------------------------------------------------------- */
+.az-pdp__complete-look {
+  background-color: #faf7f2;
+  border-top: 1px solid #ebe5dc;
+  border-bottom: 1px solid #ebe5dc;
+  padding: 60px 0;
+  margin-top: 20px;
+}
+
+.az-pdp__section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+}
+
+.az-pdp__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #72431d;
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.az-pdp__heading {
+  font-family: var(--font-heading, inherit);
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.az-pdp__gold-divider {
+  width: 48px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 12px auto;
+}
+
+.az-pdp__subheading {
+  font-size: 13px;
+  color: #6a6459;
+  margin: 0;
+}
+
+.az-pdp__pairing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.az-pdp__pairing-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e2d8;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.az-pdp__pairing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.az-pdp__pairing-img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f7f4ee;
+}
+
+.az-pdp__pairing-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.az-pdp__pairing-meta {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.az-pdp__pairing-cat {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #72431d;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.az-pdp__pairing-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.az-pdp__pairing-price {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 12px;
+}
+
+.az-pdp__pairing-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.az-pdp__pairing-btn:hover {
+  background-color: #b8431f;
+}
+
+/* --------------------------------------------------------------------------
+   5. Similar Sarees Carousel Grid
+   -------------------------------------------------------------------------- */
+.az-pdp__similar-section {
+  padding: 60px 0;
+}
+
+.az-pdp__similar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.az-pdp__similar-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.az-pdp__similar-card:hover {
+  transform: translateY(-2px);
+}
+
+.az-pdp__similar-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f7f4ee;
+  border-radius: 2px;
+}
+
+.az-pdp__similar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.az-pdp__similar-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 2px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.az-pdp__similar-quickview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.9);
+  color: #ffffff;
+  border: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.2s ease;
+}
+
+.az-pdp__similar-card:hover .az-pdp__similar-quickview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.az-pdp__similar-info {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.az-pdp__similar-designer {
+  font-size: 10px;
+  font-weight: 700;
+  color: #72431d;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.az-pdp__similar-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111111;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.az-pdp__similar-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.az-pdp__similar-price {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.az-pdp__similar-mrp {
+  font-size: 11.5px;
+  color: #888888;
+  text-decoration: line-through;
+}
+
+/* --------------------------------------------------------------------------
+   6. Mobile Sticky Bottom Purchase Bar (Hidden on Desktop)
+   -------------------------------------------------------------------------- */
+.az-pdp__mobile-sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ebe5dc;
+  padding: 10px 16px env(safe-area-inset-bottom, 10px);
+  z-index: 999;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.az-pdp__mobile-price-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.az-pdp__mobile-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.az-pdp__mobile-tax {
+  font-size: 10px;
+  color: #888888;
+}
+
+.az-pdp__mobile-btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.az-pdp__mobile-btn {
+  padding: 11px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.az-pdp__mobile-btn--stylist {
+  background-color: #ffffff;
+  color: #111111;
+  border: 1.5px solid #111111;
+}
+
+.az-pdp__mobile-btn--cart {
+  background-color: #b8431f;
+  color: #ffffff;
+  border: 1.5px solid #b8431f;
+}
+
+/* --------------------------------------------------------------------------
+   7. Size Guide Modal
+   -------------------------------------------------------------------------- */
+.az-pdp__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.az-pdp__size-modal {
+  width: 100%;
+  max-width: 680px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  padding: 28px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: azModalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes azModalPop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.az-pdp__size-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.az-pdp__size-modal-title {
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+}
+
+.az-pdp__size-modal-sub {
+  font-size: 12px;
+  color: #7a756d;
+  margin: 0;
+}
+
+.az-pdp__size-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #1a1a1a;
+  transition: opacity 0.2s;
+}
+
+.az-pdp__unit-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.az-pdp__unit-btn {
+  padding: 6px 14px;
+  border: 1px solid #d5cbbe;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #555048;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.az-pdp__unit-btn--active {
+  background-color: #111111;
+  border-color: #111111;
+  color: #ffffff;
+}
+
+.az-pdp__size-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
+.az-pdp__size-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.az-pdp__size-table th,
+.az-pdp__size-table td {
+  padding: 9px 12px;
+  border: 1px solid #e8e2d8;
+  font-size: 12px;
+}
+
+.az-pdp__size-table th {
+  background-color: #f7f3eb;
+  font-weight: 700;
+  color: #111111;
+}
+
+.az-pdp__size-footer {
+  padding: 12px 14px;
+  background-color: #faf7f2;
+  border-radius: 4px;
+  font-size: 11.5px;
+  color: #6a6459;
+}
+
+/* --------------------------------------------------------------------------
+   8. Lightbox Backdrop
+   -------------------------------------------------------------------------- */
+.az-pdp__lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.az-pdp__lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.az-pdp__lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.2s;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Desktop 1440px, Tablet 768px, Mobile 375px)
+   ========================================================================== */
+
+/* Laptop Screens (1024px - 1280px) */
+@media (max-width: 1280px) {
+  .az-pdp__container {
+    padding: 0 24px;
+  }
+
+  .az-pdp__main-grid {
+    gap: 32px;
+  }
+}
+
+/* Tablet Screens (768px - 1023px) */
+@media (max-width: 1023px) {
+  .az-pdp__container {
+    padding: 0 20px;
+  }
+
+  .az-pdp__main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .az-pdp__sticky-box {
+    position: static;
+  }
+
+  .az-pdp__pairing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .az-pdp__similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Screens (Under 768px - e.g. 375px / 390px) */
+@media (max-width: 767px) {
+  .az-pdp {
+    padding-bottom: 110px;
+  }
+
+  .az-pdp__container {
+    padding: 0 16px;
+  }
+
+  .az-pdp__breadcrumb-bar {
+    padding: 8px 0;
+  }
+
+  .az-pdp__breadcrumb-list {
+    font-size: 10.5px;
+    gap: 6px;
+  }
+
+  .az-pdp__breadcrumb-current {
+    max-width: 160px;
+  }
+
+  .az-pdp__main-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 14px;
+  }
+
+  /* On mobile, 2-column grid converts to smooth horizontal swipeable carousel */
+  .az-pdp__2col-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .az-pdp__photo-card {
+    width: 82vw;
+    min-width: 82vw;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    aspect-ratio: 2 / 3;
+  }
+
+  .az-pdp__title {
+    font-size: 14px;
+  }
+
+  .az-pdp__price-val {
+    font-size: 20px;
+  }
+
+  .az-pdp__cta-row {
+    display: none; /* Replaced by fixed bottom purchase bar */
+  }
+
+  .az-pdp__mobile-sticky-bar {
+    display: flex;
+  }
+
+  .az-pdp__confidence-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .az-pdp__pairing-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .az-pdp__similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .az-pdp__similar-quickview {
+    display: none;
+  }
+
+  .az-pdp__size-modal {
+    padding: 20px;
+  }
+}
+
+/* Extra Small Mobile (< 380px) */
+@media (max-width: 380px) {
+  .az-pdp__photo-card {
+    width: 88vw;
+    min-width: 88vw;
+  }
+
+  .az-pdp__mobile-price {
+    font-size: 15px;
+  }
+
+  .az-pdp__mobile-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+}

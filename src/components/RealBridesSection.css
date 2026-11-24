@@ -1,0 +1,278 @@
+/* ==========================================================================
+   PAVUN Celebrated Real Brides Section Styles
+   ========================================================================== */
+
+.pavun-real-brides {
+  width: 100%;
+  background-color: #faf7f2;
+  padding: 92px 32px 108px;
+  position: relative;
+  border-top: 1px solid #ebd9c8;
+}
+
+.pavun-real-brides__container {
+  max-width: var(--container-max, 1400px);
+  margin: 0 auto;
+}
+
+/* Header */
+.pavun-real-brides__header {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 56px;
+}
+
+.pavun-real-brides__eyebrow {
+  display: block;
+  font-family: var(--font-nav, inherit);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--color-brand-green, #093c2e);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.pavun-real-brides__title {
+  font-family: var(--font-heading, serif);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.pavun-real-brides__divider {
+  width: 56px;
+  height: 2px;
+  background-color: #d5b687;
+  margin: 0 auto 18px;
+}
+
+.pavun-real-brides__subtitle {
+  font-family: var(--font-body, sans-serif);
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}
+
+/* 4 Story Cards Grid */
+.pavun-real-brides__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.pavun-real-brides__card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #ebd9c8;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(18, 14, 10, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-real-brides__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(18, 14, 10, 0.12);
+  border-color: #d5b687;
+}
+
+/* Media Frame */
+.pavun-real-brides__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: #f1ede8;
+}
+
+.pavun-real-brides__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pavun-real-brides__card:hover .pavun-real-brides__img {
+  transform: scale(1.06);
+}
+
+.pavun-real-brides__overlay,
+.pavun-real-brides__vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 60%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* View Outfit Floating Pill */
+.pavun-real-brides__quick-pill {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-brand-green, #093c2e);
+  font-family: var(--font-nav, inherit);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.pavun-real-brides__card:hover .pavun-real-brides__quick-pill {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Story Details Container (supports both .content and .meta) */
+.pavun-real-brides__content,
+.pavun-real-brides__meta {
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.pavun-real-brides__venue {
+  font-family: var(--font-nav, inherit);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #8c7653;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.pavun-real-brides__couple {
+  font-family: var(--font-heading, serif);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.pavun-real-brides__look {
+  font-family: var(--font-nav, inherit);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand-green, #093c2e);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+
+/* Tablet Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+  .pavun-real-brides {
+    padding: 68px 24px 84px;
+  }
+
+  .pavun-real-brides__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .pavun-real-brides__title {
+    font-size: 32px;
+  }
+
+  .pavun-real-brides__quick-pill {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    padding: 8px 14px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile Screens (Under 768px) */
+@media (max-width: 768px) {
+  .pavun-real-brides {
+    padding: 56px 16px 68px;
+  }
+
+  .pavun-real-brides__header {
+    margin-bottom: 32px;
+  }
+
+  .pavun-real-brides__title {
+    font-size: 26px;
+    letter-spacing: 0.14em;
+  }
+
+  .pavun-real-brides__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 4px 4px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pavun-real-brides__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pavun-real-brides__card {
+    flex: 0 0 78vw;
+    min-width: 250px;
+    max-width: 310px;
+    scroll-snap-align: center;
+  }
+
+  .pavun-real-brides__quick-pill {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    padding: 8px 14px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  .pavun-real-brides__content,
+  .pavun-real-brides__meta {
+    padding: 18px 16px 20px;
+  }
+
+  .pavun-real-brides__couple {
+    font-size: 15px;
+  }
+}
+
+/* Extra Small Phones (Under 400px) */
+@media (max-width: 400px) {
+  .pavun-real-brides__card {
+    flex: 0 0 84vw;
+  }
+}

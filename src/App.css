@@ -1,0 +1,25 @@
+/* ==========================================================================
+   PAVUN App Root Container Styles
+   Fluid & Fully Responsive Architecture for All Devices
+   ========================================================================== */
+
+@import './styles/animations.css';
+
+.pavun-app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.pavun-main-wrapper {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}

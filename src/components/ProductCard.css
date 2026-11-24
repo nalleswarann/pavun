@@ -1,0 +1,281 @@
+/* ==========================================================================
+   PAVUN Product Card - Luxury Indian Couture Aesthetic
+   ========================================================================== */
+
+.pavun-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  overflow: hidden;
+  border: 1px solid rgba(9, 60, 46, 0.06);
+}
+
+.pavun-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(9, 60, 46, 0.08);
+}
+
+/* Image Container */
+.pavun-product-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #f7f3ee;
+}
+
+.pavun-product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pavun-product-card:hover .pavun-product-card__img {
+  transform: scale(1.06);
+}
+
+/* Luxury Tag / Badge */
+.pavun-product-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(9, 60, 46, 0.92);
+  color: #ffffff;
+  font-family: var(--font-nav);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 1px;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Wishlist Heart Button */
+.pavun-product-card__wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #093c2e;
+  z-index: 2;
+  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pavun-product-card__wishlist-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  color: #c48951;
+}
+
+.pavun-product-card__wishlist-btn--active {
+  background-color: #093c2e;
+  color: #d5b687;
+}
+
+/* Hover Quick Actions Overlay */
+.pavun-product-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(9, 60, 46, 0.8) 0%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 3;
+}
+
+.pavun-product-card:hover .pavun-product-card__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pavun-product-card__quick-view-btn {
+  background-color: #ffffff;
+  color: #093c2e;
+  border: none;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.pavun-product-card__quick-view-btn:hover {
+  background-color: #093c2e;
+  color: #ffffff;
+}
+
+/* Details Section */
+.pavun-product-card__details {
+  padding: 18px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #ffffff;
+}
+
+.pavun-product-card__category {
+  font-family: var(--font-nav);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c7355;
+  margin-bottom: 4px;
+}
+
+.pavun-product-card__title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 500;
+  color: #111814;
+  line-height: 1.35;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.02em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+}
+
+.pavun-product-card__fabric {
+  font-family: var(--font-nav);
+  font-size: 11px;
+  color: #6d7570;
+  margin: 0 0 12px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pricing */
+.pavun-product-card__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pavun-product-card__price {
+  font-family: var(--font-nav);
+  font-size: 15px;
+  font-weight: 600;
+  color: #093c2e;
+  letter-spacing: 0.04em;
+}
+
+.pavun-product-card__orig-price {
+  font-family: var(--font-nav);
+  font-size: 12px;
+  color: #9da39f;
+  text-decoration: line-through;
+}
+
+/* Quick Sizes Bar */
+.pavun-product-card__sizes-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f0eee9;
+}
+
+.pavun-product-card__size-pills {
+  display: flex;
+  gap: 4px;
+}
+
+.pavun-product-card__size-btn {
+  background: transparent;
+  border: 1px solid #e0dbd3;
+  color: #555c57;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pavun-product-card__size-btn:hover {
+  border-color: #093c2e;
+  color: #093c2e;
+}
+
+.pavun-product-card__size-btn--active {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+}
+
+.pavun-product-card__add-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #f7f3ee;
+  border: 1px solid #ded8cc;
+  color: #093c2e;
+  font-family: var(--font-nav);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pavun-product-card__add-btn:hover {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #ffffff;
+}
+
+.pavun-product-card__add-btn--added {
+  background-color: #093c2e;
+  border-color: #093c2e;
+  color: #d5b687;
+}
+
+/* Mobile & Tablet Fine-tuning */
+@media (max-width: 768px) {
+  .pavun-product-card__details {
+    padding: 12px 10px 10px;
+  }
+  .pavun-product-card__title {
+    font-size: 14px;
+    min-height: 38px;
+  }
+  .pavun-product-card__price {
+    font-size: 13px;
+  }
+  .pavun-product-card__overlay {
+    display: none;
+  }
+}
